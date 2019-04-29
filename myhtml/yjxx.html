@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>北京市建筑工程事故值守应急系统</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../src/css/layui.css">
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+ <ul class="layui-nav layui-bg-green layui-row">
+ 	<a href="javascript:;" class="layui-col-md3">
+ 		<img src="../dist/images/logo.png" background-size:50px 100px;class="layui-nav-img">
+ 		<font color="white">北京市建筑工程事故值守应急系统</font>
+ 	</a>
+ 	<li class="layui-nav-item layui-this"><a href="../myhtml/test.html">首页</a></li>
+ 	<li class="layui-nav-item"><a href="../myhtml/yjxx.html">预警发布</a></li>
+ 	<li class="layui-nav-item"><a href="../myhtml/tzgg.html">通知公告</a></li>
+ 	<li class="layui-nav-item">
+ 		<a href="javascript:;">值班值守</a>
+ 		<dl class="layui-nav-child">
+ 			<dd><a href="">事件管理</a></dd>
+ 			<dd><a href="">检查抽查</a></dd>
+ 			<dd><a href="">本级值班</a></dd>
+ 			<dd><a href="">下级值班</a></dd>
+ 			<dd><a href="">值班抽查</a></dd>
+ 		</dl>
+ 	</li>
+ 	<li class="layui-nav-item">
+ 		<a href="javascript:;">应急保障</a>
+ 		<dl class="layui-nav-child">
+ 			<dd><a href="">应急预案</a></dd>
+ 			<dd><a href="">应急专家</a></dd>
+ 			<dd><a href="">应急物资</a></dd>
+ 			<dd><a href="">应急队伍</a></dd>
+ 		</dl>
+ 	</li>
+ 	<li class="layui-nav-item">
+ 		<a href="javascript:;">系统服务</a>
+ 		<dl class="layui-nav-child">
+ 			<dd><a href="">统计分析</a></dd>
+ 			<dd><a href="">用户信息</a></dd>
+ 			<dd><a href="">通讯录</a></dd>
+ 		</dl>
+ 	</li>
+ 
+ 
+ 	<div style="float: right;margin-right: 0px;margin-left: -80px;">
+ 		<div class="layui-btn-group">
+ 			<button class="layui-btn">设置</button>
+ 			<button class="layui-btn">注销</button>
+ 			<button class="layui-btn">退出</button>
+ 		</div>
+ 		<div style="font-size:10px;text-align:center;">
+ 			欢迎:系统管理员(admin)
+ 		</div>
+ 	</div>
+ 
+ 	<div style="float: right;margin-right: 120px;margin-top: 7px;">
+ 		<div style="font-size:10px">
+ 			带班领导:&nbsp;&nbsp;张&nbsp;&nbsp;&nbsp;三
+ 		</div>
+ 		<div style="font-size:10px">
+ 			带班处长:&nbsp;&nbsp;赵小明
+ 		</div>
+ 		<div style="font-size:10px">
+ 			值&nbsp;&nbsp;班&nbsp;&nbsp;员:&nbsp;&nbsp;王&nbsp;&nbsp;&nbsp;五
+ 		</div>
+ 	</div>
+ 
+ </ul>
+ 
+	<div class="layui-tab layui-tab-brief">
+	
+				<!-- 页签头部 -->
+				<ul class="layui-tab-title layui-col-md-offset1">
+					<li class="layui-this">
+						<h3>待处理信息</h3>
+					</li>
+					<li>
+						<h3>历史查询</h3>
+					</li>
+				</ul>
+	
+				<!-- 页签主体 -->
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show layui-row">
+						<ul class="layui-timeline layui-col-md-offset1">
+	
+							<!-- 时间线主体 -->
+							<li class="layui-timeline-item">
+								<img class="layui-timeline-axis" id="add" src="../dist/images/111.svg"/>
+								<div class="layui-timeline-content layui-text">
+									<h3 class="layui-timeline-title">
+										<div class="layui-row">
+											<div class="layui-col-md10 layui-row">
+												<div class="layui-col-md1">9月27日</div><br><br>
+												<div class="layui-col-md8">市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+												<div class="layui-col-md3">
+													
+												</div>
+											</div>
+										</div>
+									</h3>
+									<p>
+										<div class="layui-row">
+											<div class="layui-textarea layui-col-md7" style="width: 60%;height: 100px;">
+												市气象台2017年09月27日14时17分发布大雾黄色预警信号
+											</div>
+											<div class="layui-col-md4 layui-row">
+												<div class="layui-col-md-offset1 layui-col-md3">
+													<button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="fb" style="height: 90px;margin: 10px;border-radius:45px;width: 90px;">发布</button>
+												</div>
+												<div class="layui-col-md4">
+													<button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-danger" id="del" style="height: 90px;margin: 10px;border-radius:45px;width: 90px;">删除</button>
+												</div>
+											</div>
+										</div>
+										<div class="layui-row">
+											<div class="layui-col-md11">
+												来源单位：<span>气象局</span>
+											</div>
+											<div class="layui-col-md11">
+												发生时间：<span>2017/9/27 18:09</span>
+											</div>
+										</div>
+									</p>
+								</div>
+							</li>
+							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+								<div class="layui-timeline-content layui-text">
+									<h3 class="layui-timeline-title">
+										<div class="layui-row">
+											<div class="layui-col-md10 layui-row">
+												<div class="layui-col-md1">9月27日</div>
+												<div class="layui-col-md8">市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+												<div class="layui-col-md3">
+													<fieldset class="layui-elem-field onhover" style="height: 55px;margin-bottom: -10px;" id="jsjd">
+														<legend>接收进度</legend>
+														<div class="layui-field-box">
+															<div class="layui-progress layui-progress-big" lay-showpercent="true">
+																<div class="layui-progress-bar" lay-percent="70%">&nbsp;</div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+										</div>
+									</h3>
+									<p>
+										<div class="layui-row">
+											<div class="layui-textarea layui-col-md7" style="width: 60%;height: 100px;">
+												市气象台2017年09月27日14时17分发布大雾黄色预警信号
+											</div>
+											<div class="layui-col-md4 layui-row">
+												<div class="layui-col-md-offset1 layui-col-md3">
+													<button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm" style="height: 90px;margin: 10px;border-radius:45px;width: 90px;">解除</button>
+												</div>
+												<div class="layui-col-md4">
+													<button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-disabled" style="height: 90px;margin: 10px;border-radius:45px;width: 90px;">删除</button>
+												</div>
+											</div>
+										</div>
+										<div class="layui-row">
+											<div class="layui-col-md11">
+												来源单位：<span>气象局</span>
+											</div>
+											<div class="layui-col-md11">
+												发生时间：<span>2017/9/27 18:09</span>
+											</div>
+										</div>
+									</p>
+								</div>
+							</li>
+							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+								<div class="layui-timeline-content layui-text">
+									<div class="layui-timeline-title">&nbsp;</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+	
+					<!-- 第二页签模块 -->
+					<div class="layui-tab-item layui-col-md-offset1">
+	
+						<!-- 预警历史数据表查询条件 -->
+						<form class="layui-form" action="" style="margin-left: -70px;">
+							<div class="layui-form-item">
+								<div class="layui-input-inline">
+									<label class="layui-form-label">标题</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" style="width: 150px;" placeholder="请输入标题" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">级别</label>
+									<div class="layui-input-block" style="width: 150px;">
+										<select name="city">
+											<option value=""></option>
+											<option value="0">红</option>
+											<option value="1">橙</option>
+											<option value="2">黄</option>
+											<option value="3">篮</option>、
+										</select>
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">类别</label>
+									<div class="layui-input-block" style="width: 120px;">
+										<select name="city">
+											<option value=""></option>
+											<option value="0">大风</option>
+											<option value="1">暴雨</option>
+											<option value="2">高温</option>
+											<option value="3">恶劣天气</option>
+											<option value="4">空气重污染</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">时间选择</label>
+									<div class="layui-input-block">
+										<input type="text" style="width: 290px;" class="layui-input" id="time">
+									</div>
+								</div>
+								<div class="layui-input-inline" style="margin-left: 210px;">
+									<button class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
+								</div>
+							</div>
+						</form>
+	
+						<!-- 预警历史数据表 -->
+						<table id="lssj" lay-filter="lssj"></table>
+	
+					</div>
+				</div>
+	
+	
+				<!-- 预警接收进度弹窗 -->
+				<div id="jsjdck" style="display: none;padding: 20px;">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="radio" name="sex" value="全部" title="全部" checked>
+								<input type="radio" name="sex" value="领导" title="领导">
+								<input type="radio" name="sex" value="区级单位" title="区级单位">
+								<input type="radio" name="sex" value="施工单位" title="施工单位">
+							</div>
+						</div>
+					</form>
+					<table id="jsjdb"></table>
+				</div>
+	
+				<!-- 预警详情窗口 -->
+				<div id="yjxqck" style="display: none;padding: 20px;">
+					<div class="layui-container" style="width: 780px;">
+						<div class="layui-row">
+							<div class="layui-col-md12">标题：市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+							<div class="layui-col-md6">级别：四级</div>
+							<div class="layui-col-md6">类别：恶劣天气</div>
+							<div class="layui-col-md6">信息来源：市气象局</div>
+							<div class="layui-col-md6">发布时间：2017-09-27 14:17:00</div>
+							<div class="layui-col-md12">
+								预警内容：
+								<div class="layui-textarea" style="width: 700px;">
+									市气象台2018年10月25日16时30分发布大风蓝色预警信号，受冷空气影响，预计25日夜间到26日，
+									本市将有4、5级偏北风，阵风可达7级左右。
+								</div>
+							</div>
+							<div class="layui-col-md6">附件：<a href='../src/test_file.doc' class='layui-table-link layui-re'>测试反馈附件</a></div>
+						</div>
+					</div>
+				</div>
+	
+				<!-- 预警发布弹窗 -->
+				<div id="fbck" style="display: none;padding: 20px;">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<label class="layui-form-label">标题</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">预警级别</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required">
+										<option value=""></option>
+										<option value="0">一级</option>
+										<option value="1">二级</option>
+										<option value="2">三级</option>
+										<option value="3">四级</option>、
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">事件类别</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required">
+										<option value=""></option>
+										<option value="0">大风</option>
+										<option value="1">暴雨</option>
+										<option value="2">高温</option>
+										<option value="3">恶劣天气</option>
+										<option value="4">空气重污染</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">来源单位</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required">
+										<option value=""></option>
+										<option value="0">市气象局</option>
+										<option value="1">市防汛办</option>
+										<option value="2">市应急管理局</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">发生时间</label>
+								<div class="layui-inline">
+									<input class="layui-input" placeholder="请选择时间" id="sj">
+								</div>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">发布类型</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required">
+										<option value=""></option>
+										<option value="0">首发</option>
+										<option value="1">更新</option>
+										<option value="2">解除</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">发布范围</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">预警内容</label>
+							<div class="layui-input-block">
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">应对措施</label>
+							<div class="layui-input-block">
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">附件</label>
+							<div class="layui-input-block">
+								<button type="button" class="layui-btn" id="file">
+									<i class="layui-icon">&#xe67c;</i>附件
+								</button>
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">发送范围</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
+								<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
+								<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">发送方式</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+								<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+								<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+	
+				<!-- layui.js文件引入 -->
+				<script src="../src/layui.js"></script>
+				<script>
+					//引入所需layui模块
+					layui.use(['element', 'jquery', 'layer', 'laydate', 'form', 'upload', 'table'], function() {
+						var element = layui.element,
+							$ = layui.$,
+							layer = layui.layer,
+							form = layui.form,
+							laydate = layui.laydate,
+							table = layui.table,
+							upload = layui.upload;
+	
+						// 预警接收进度表数据填充
+						table.render({
+							elem: '#jsjdb',
+							skin: 'nob',
+							url: '../myhtml/table/yj.json',
+							cols: [
+								[{
+									field: 'company',
+									title: '接收单位',
+									width: 120,
+									fixed: 'left'
+								}, {
+									field: 'username',
+									title: '接收人',
+									width: 80
+								}, {
+									field: 'phone',
+									title: '接收人手机号',
+									width: 120
+								}, {
+									field: 'time',
+									title: '接收时间',
+									width: 150
+								}, {
+									field: 'state',
+									title: '接收状态',
+									width: 177
+								}]
+							]
+						});
+	
+						// 预警历史数据表数据填充
+						table.render({
+							elem: '#lssj',
+							skin: 'nob',
+							url: '../myhtml/table/yj.json',
+							width: 1300,
+							page: {
+								count: 100,
+								limit: 10,
+								limits: [10, 20, 30]
+							},
+							cols: [
+								[{
+										field: 'level',
+										title: '级别',
+										templet: function(obj) {
+											var color = "#FF0000"
+											switch (obj.level) {
+												case 2:
+													color = "#FF9900";
+													break;
+												case 3:
+													color = "#FFFF00";
+													break;
+												case 4:
+													color = "#0000FF";
+													break;
+											}
+											return "<div style='background-color: " + color +
+												";width: 70px;height: 10px;margin-top: 5px;'> </div>"
+										},
+										width: 100
+									},
+									{
+										field: 'title',
+										title: '预警标题',
+										event: 'detail',
+										width: 450
+									},
+									{
+										field: 'time',
+										title: '创建时间',
+										width: 150
+									},
+									{
+										field: 'mesf',
+										title: '信息来源',
+										width: 120
+									},
+									{
+										field: 'mesf',
+										title: '附件',
+										templet: function(obj) {
+											return "<a href='../src/test_file.doc' class='layui-table-link'>测试反馈附件</a>";
+										},
+										width: 150
+									},
+									{
+										field: 'progress',
+										title: '接收进度',
+										event: 'progdt',
+										templet: function(obj) {
+											return "<div class='layui-progress layui-progress-big' lay-showPercent='yes'>" +
+												"<div class='layui-progress-bar layui-bg-green' lay-percent='" + obj.progress + "%'></div>" +
+												"</div>";
+										},
+										width: 250
+									}
+								]
+							],
+							done: function(res, curr, count) {
+								element.render();
+							}
+						});
+	
+						// 预警历史数据表,预警标题字段监听,点击弹出预警详情窗口
+						table.on('tool(lssj)', function(obj) {
+							var data = obj.data;
+							if (obj.event === 'detail') {
+								layer.open({
+									title: '预警详情',
+									type: 1,
+									content: $("#yjxqck"),
+									area: '800px'
+								});
+							} else if (obj.event === 'progdt') {
+								layer.open({
+									title: '接收进度',
+									type: 1,
+									content: $("#jsjdck"),
+									area: '800px'
+								});
+							}
+						});
+	
+						// 文件上传元素初始化
+						var uploadInst = upload.render({
+							elem: '#file',
+							url: '/upload/'
+						});
+	
+						// layui时间模块初始化
+						laydate.render({
+							elem: '#sj',
+							type: 'datetime'
+						});
+	
+						// 监听预警接收进度条,点击弹出预警接收进度表
+						$("#jsjd").click(function() {
+							layer.open({
+								title: '接收进度',
+								type: 1,
+								content: $("#jsjdck"),
+								area: '800px'
+							});
+						});
+	
+						// 发布按钮事件
+						$("#fb").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck"),
+								area: ['800px', '630px']
+							});
+						});
+						
+						// 添加按钮事件
+						$("#add").click(function() {
+							layer.open({
+								title: '新增预警',
+								type: 1,
+								content: $("#fbck"),
+								area: ['800px', '630px']
+							});
+						});
+	
+						// 删除按钮事件
+						$("#del").click(function() {
+							layer.open({
+								title: '删除预警信息',
+								type: 0,
+								content: '确认删除？',
+								btn: ['确定', '取消']
+							});
+						});
+					});
+				</script>
+		</body>
+	</html>

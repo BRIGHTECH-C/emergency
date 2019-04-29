@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新建预警</title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+	</head>
+	<body>
+		<!-- 预警标题 -->
+		<form class="layui-form" action="">
+			<div class="layui-form-item">
+				<label class="layui-form-label">标题:</label>
+				<div class="layui-input-block">
+					<input type="text" style="width:600px; name=" title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+					 class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<!-- layui-form-item表单组件，默认占一行 -->
+				<div class="layui-inline">
+					<!-- layui-inline表示行内元素不单独占一行 -->
+					<label class="layui-form-label">级别</label>
+					<div class="layui-input-block" style="width:235px;">
+						<select name="interest" lay-filter="aihao">
+							<option value="">请选择</option>
+							<option value="0">一级</option>
+							<option value="1">二级</option>
+							<option value="2">三级</option>
+							<option value="3">四级</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">类别</label>
+					<div class="layui-input-block" style="width:240px;">
+						<select name="interest" lay-filter="aihao">
+							<option value="">请选择</option>
+							<option value="0">大风</option>
+							<option value="1">暴雨</option>
+							<option value="2">高温</option>
+							<option value="3">恶劣天气</option>
+							<option value="3">空气重污染</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<!-- layui-inline表示行内元素不单独占一行 -->
+					<label class="layui-form-label">信息来源</label>
+					<div class="layui-input-block" style="width:235px;">
+						<select name="interest" lay-filter="aihao">
+							<option value="">请选择</option>
+							<option value="">市气象局</option>
+							<option value="0">市防汛办</option>
+							<option value="1">市应急管理局</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			
+			<div class="layui-form-item layui-form-text">
+				<label class="layui-form-label">普通文本域</label>
+				<div class="layui-input-block" style="width:600px;">
+					<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+				</div>
+			</div>
+
+			<div class="layui-form-item" pane="">
+				<label class="layui-form-label">发送范围</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
+					<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
+					<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+				</div>
+			</div>
+
+			<div class="layui-form-item" pane="">
+				<label class="layui-form-label">发送方式</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="">
+					<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP" checked="">
+					<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="">
+				</div>
+			</div>
+
+			<div class="layui-upload"><br><br><br>
+				<div class="layui-inline" style="padding-left:200px;">
+					<button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>上传文件</button>
+					<button class="layui-btn">发布</button>
+					<button class="layui-btn">取消</button>
+				</div>
+			</div>
+
+		</form>
+		<script src="../src/layui.js"></script>
+		<script>
+			//引用所需要模块（layer弹窗模块、jquery选择器）
+			layui.use(['element', 'layer', 'jquery', 'form', 'laydate', 'upload'], function() {
+				var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+				var form = layui.form;
+				var laydate = layui.laydate;
+				var $ = layui.jquery
+				var upload = layui.upload;
+				//监听导航点击
+				element.on('nav(demo)', function(elem) {
+					//console.log(elem)
+					layer.msg(elem.text());
+				});
+				//日期时间选择器
+				laydate.render({
+					elem: '#test5',
+					type: 'datetime'
+				});
+				laydate.render({
+					elem: '#test6',
+					type: 'datetime'
+				});
+				//上传附件
+				upload.render({
+					elem: '#test3',
+					url: '/upload/',
+					accept: 'file' //普通文件
+						,
+					done: function(res) {
+						console.log(res)
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

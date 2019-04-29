@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>layout 后台大布局 - Layui</title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+	</head>
+	<body>
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<ul class="layui-nav" style="text-align: center;">
+			<li class="layui-nav-item"><a href="">首页</a></li>
+			<li class="layui-nav-item layui-this"><a href="">预警发布<span class="layui-badge">3</span></a></li>
+			<li class="layui-nav-item"><a href="">通讯录</a></li>
+			<li class="layui-nav-item"><a href="">通知公告</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">值班值守</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">事件管理</a></dd>
+					<dd><a href="">检查抽查</a></dd>
+					<dd><a href="">本级值班</a></dd>
+					<dd><a href="">下级值班</a></dd>
+					<dd><a href="">值班抽查</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">应急保障</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">应急预案</a></dd>
+					<dd><a href="">应急专家</a></dd>
+					<dd><a href="">应急物资</a></dd>
+					<dd><a href="">应急队伍</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">系统服务</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">统计分析</a></dd>
+					<dd><a href="">用户信息</a></dd>
+				</dl>
+			</li>
+		</ul>
+		<div class="layui-tab">
+			<ul class="layui-tab-title layui-col-md-offset1">
+				<li class="layui-this">待处理的预警信息</li>
+				<li>预警信息查询</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show layui-row">
+					<ul class="layui-timeline layui-col-md-offset1">
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">
+									<div class="layui-row">
+										<div class="layui-col-md10 layui-row">
+											<div class="layui-col-md1">9月27日</div>
+											<div class="layui-col-md7">市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+											<div class="layui-col-md1">接收进度：</div>
+											<div class="layui-progress layui-progress-big layui-col-md3" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="70%"></div>
+											</div>
+										</div>
+									</div>
+								</h3>
+								<p class="layui-row">
+									<div class="layui-textarea " style="width: 60%;height: 100px;">
+										市气象台2017年09月27日14时17分发布大雾黄色预警信号
+									</div>
+									<div class="layui-row">
+										<div class="layui-col-md11">
+											来源单位：<span>气象局</span>
+										</div>
+										<div class="layui-col-md11">
+											接受时间：<span>2017/9/27 18:09</span>
+										</div>
+									</div>
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">
+									<div class="layui-row">
+										<div class="layui-col-md10 layui-row">
+											<div class="layui-col-md1">9月27日</div>
+											<div class="layui-col-md7">市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+											<div class="layui-col-md1">接收进度：</div>
+											<div class="layui-progress layui-progress-big layui-col-md3" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="70%"></div>
+											</div>
+										</div>
+									</div>
+								</h3>
+								<p>
+									<div class="layui-textarea" style="width: 60%;height: 100px;">
+										市气象台2017年09月27日14时17分发布大雾黄色预警信号
+									</div>
+									<div class="layui-row">
+										<div class="layui-col-md11">
+											来源单位：<span>气象局</span>
+										</div>
+										<div class="layui-col-md11">
+											接受时间：<span>2017/9/27 18:09</span>
+										</div>
+									</div>
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">
+									<div class="layui-row">
+										<div class="layui-col-md10 layui-row">
+											<div class="layui-col-md1">9月27日</div>
+											<div class="layui-col-md7">市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+											<div class="layui-col-md1">接收进度：</div>
+											<div class="layui-progress layui-progress-big layui-col-md3" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="70%"></div>
+											</div>
+										</div>
+									</div>
+								</h3>
+								<p>
+									<div class="layui-textarea" style="width: 60%;height: 100px;">
+										市气象台2017年09月27日14时17分发布大雾黄色预警信号
+									</div>
+									<div class="layui-row">
+										<div class="layui-col-md11">
+											来源单位：<span>气象局</span>
+										</div>
+										<div class="layui-col-md11">
+											接受时间：<span>2017/9/27 18:09</span>
+										</div>
+									</div>
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<div class="layui-timeline-title">&nbsp;</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="layui-tab-item layui-col-md-offset1">内容2</div>
+			</div>
+			<script src="../src/layui.js"></script>
+			<script>
+				//JavaScript代码区域
+				layui.use('element', function() {
+					var element = layui.element;
+
+				});
+			</script>
+	</body>
+</html>
