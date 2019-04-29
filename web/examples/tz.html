@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+		<link rel="stylesheet" href="./css/base.css">
+	</head>
+	<body>
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<ul class="layui-nav" style="text-align: center;">
+			<li class="layui-nav-item"><a href="">首页</a></li>
+			<li class="layui-nav-item"><a href="./yj.1.html">预警发布<span class="layui-badge">2</span></a></li>
+			<li class="layui-nav-item"><a href="">通讯录</a></li>
+			<li class="layui-nav-item layui-this"><a href="">通知公告</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">值班值守</a>
+				<dl class="layui-nav-child">
+					<dd><a href="./sj.html">事件管理</a></dd>
+					<dd><a href="">检查抽查</a></dd>
+					<dd><a href="">本级值班</a></dd>
+					<dd><a href="">下级值班</a></dd>
+					<dd><a href="">值班抽查</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">应急保障</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">应急预案</a></dd>
+					<dd><a href="">应急专家</a></dd>
+					<dd><a href="">应急物资</a></dd>
+					<dd><a href="">应急队伍</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">系统服务</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">统计分析</a></dd>
+					<dd><a href="">用户信息</a></dd>
+				</dl>
+			</li>
+		</ul>
+		<div style="margin-left: 10%;margin-top: 20px;width: 80%;">
+
+			<div class="layui-row">
+				<div class="layui-col-md2 layui-btn-group">
+					<button class="layui-btn" id="cjtz">增加</button>
+					<button class="layui-btn" id="del">删除</button>
+				</div>
+				<!-- 通知数据表查询条件 -->
+				<form class="layui-form layui-col-md10" action="" style="margin-left: -6%;">
+					<div class="layui-form-item layui-row">
+						<div class="layui-col-md3">
+							<label class="layui-form-label">标题</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-col-md3" style="margin-left: -4%;">
+							<label class="layui-form-label">类别</label>
+							<div class="layui-input-block">
+								<select name="city">
+									<option value=""></option>
+									<option value="0">通知</option>
+									<option value="1">其他通知</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-col-md5">
+							<label class="layui-form-label">时间选择</label>
+							<div class="layui-input-block">
+								<input type="text" class="layui-input" id="time">
+							</div>
+						</div>
+						<div class="layui-col-md1" style="margin-left: 20px;">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- 通知历史数据表 -->
+			<table id="lssj" lay-filter="lssj"></table>
+		</div>
+
+		<!-- 预警详情窗口 -->
+		<div id="yjxqck" style="display: none;padding: 20px;">
+			<div class="layui-container" style="width: 780px;">
+				<div class="layui-row">
+					<div class="layui-col-md12">标题：市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+					<div class="layui-col-md6">级别：四级</div>
+					<div class="layui-col-md6">类别：恶劣天气</div>
+					<div class="layui-col-md6">信息来源：市气象局</div>
+					<div class="layui-col-md6">发布时间：2017-09-27 14:17:00</div>
+					<div class="layui-col-md12">
+						预警内容：
+						<div class="layui-textarea" style="width: 700px;">
+							市气象台2018年10月25日16时30分发布大风蓝色预警信号，受冷空气影响，预计25日夜间到26日，
+							本市将有4、5级偏北风，阵风可达7级左右。
+						</div>
+					</div>
+					<div class="layui-col-md6">附件：<a href='../src/test_file.doc' class='layui-table-link layui-re'>测试反馈附件</a></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 创建通知弹窗 -->
+		<div id="fbck" style="display: none;padding: 20px;" class="layui-row">
+			<div class="layui-col-md-offset1">1</div>
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">标题</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">联系人</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">联系电话</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">发起单位</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">通知类型</label>
+						<div class="layui-input-block">
+							<select name="city" lay-verify="required">
+								<option value=""></option>
+								<option value="0">会议</option>
+								<option value="1">通知</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">通知内容</label>
+					<div class="layui-input-block">
+						<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">附件</label>
+					<div class="layui-input-block">
+						<button type="button" class="layui-btn" id="file">
+							<i class="layui-icon">&#xe67c;</i>附件
+						</button>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">发送范围</label>
+					<div class="layui-input-block">
+						<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">发送方式</label>
+					<div class="layui-input-block">
+						<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- 通知接收进度弹窗 -->
+		<div id="jsjdck" style="display: none;padding: 20px;">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<input type="radio" name="sex" value="全部" title="全部" checked>
+						<input type="radio" name="sex" value="领导" title="领导">
+						<input type="radio" name="sex" value="区级单位" title="区级单位">
+						<input type="radio" name="sex" value="施工单位" title="施工单位">
+					</div>
+				</div>
+			</form>
+			<table id="jsjdb"></table>
+		</div>
+
+		<!-- 通知详情弹窗 -->
+		<div id="xqck" style="display: none;padding: 20px;">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">标题</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" required lay-verify="required" value="关于配合做好北京建筑工程事故应急指挥系统平台上云割接期间有关工作的通知"
+						 autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">通知类型</label>
+						<div class="layui-input-block">
+							<select name="city" lay-verify="required">
+								<option value=""></option>
+								<option value="0">会议</option>
+								<option value="1" selected>通知</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">联系人</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" value="王颀" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">联系电话</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" value="55597101" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">通知内容</label>
+					<div class="layui-input-block">
+						<textarea name="desc" class="layui-textarea">详情见附件</textarea>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">附件</label>
+					<div class="layui-input-block">
+						<div style="padding-top: 8px;"><a href="../src/test_file.doc" style="color: #1E9FFF;">测试通知附件</a></div>
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">发送范围</label>
+					<div class="layui-input-block">
+						<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">发送方式</label>
+					<div class="layui-input-block">
+						<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- layui.js文件引入 -->
+		<script src="../src/layui.js"></script>
+		<script>
+			//引入所需layui模块
+			layui.use(['element', 'jquery', 'layer', 'laydate', 'form', 'upload', 'table'], function() {
+				var element = layui.element,
+					$ = layui.$,
+					layer = layui.layer,
+					form = layui.form,
+					laydate = layui.laydate,
+					table = layui.table,
+					upload = layui.upload;
+
+				// 通知接收进度表数据填充
+				table.render({
+					elem: '#jsjdb',
+					skin: 'nob',
+					url: './json/table/jsjd.json',
+					cols: [
+						[{
+							field: 'company',
+							title: '接收单位',
+							width: 120,
+							fixed: 'left'
+						}, {
+							field: 'username',
+							title: '接收人',
+							width: 80
+						}, {
+							field: 'phone',
+							title: '接收人手机号',
+							width: 120
+						}, {
+							field: 'time',
+							title: '接收时间',
+							width: 150
+						}, {
+							field: 'state',
+							title: '接收状态',
+							width: 177
+						}]
+					]
+				});
+
+				// 通知数据表数据填充
+				table.render({
+					elem: '#lssj',
+					skin: 'nob',
+					url: './json/table/tz.json',
+					width: 1150,
+					page: {
+						count: 100,
+						limit: 10,
+						limits: [10, 20, 30]
+					},
+					cols: [
+						[{
+								type: 'checkbox',
+								fixed: 'left'
+							},
+							{
+								field: 'title',
+								title: '标题',
+								event: 'detail',
+								width: 450
+							},
+							{
+								field: 'time',
+								title: '创建时间',
+								width: 200,
+								sort: true,
+								align: 'center'
+							},
+							{
+								field: 'type',
+								title: '通知类型',
+								width: 150,
+								align: 'center',
+								templet: function(obj) {
+									return obj.type == 1 ? "其他通知" : "通知";
+								}
+							},
+							{
+								field: 'state',
+								title: '发布状态',
+								width: 100,
+								align: 'center',
+								sort: true,
+								templet: function(obj) {
+									return obj.state == 1 ? "已发布" : "未发布";
+								}
+							},
+							{
+								field: 'progress',
+								title: '接收进度',
+								event: 'progdt',
+								align: 'center',
+								templet: function(obj) {
+									return "<div class='layui-progress layui-progress-big' lay-showPercent='yes'>" +
+										"<div class='layui-progress-bar layui-bg-green' lay-percent='" + obj.progress + "%'></div>" +
+										"</div>";
+								},
+								width: 200
+							}
+						]
+					],
+					done: function(res, curr, count) {
+						element.render();
+					}
+				});
+
+				// 通知数据表,通知标题与进度字段监听,点击弹出通知详情窗口或接收进度窗口
+				table.on('tool(lssj)', function(obj) {
+					var data = obj.data;
+					if (obj.event === 'detail') {
+						layer.open({
+							title: '通知详情',
+							type: 1,
+							content: $("#xqck"),
+							area: '800px'
+						});
+					} else if (obj.event === 'progdt') {
+						layer.open({
+							title: '接收进度',
+							type: 1,
+							content: $("#jsjdck"),
+							area: '800px'
+						});
+					}
+				});
+
+				// 文件上传元素初始化
+				var uploadInst = upload.render({
+					elem: '#file',
+					url: '/upload/'
+				});
+
+				// layui时间模块初始化
+				laydate.render({
+					elem: '#time',
+					type: 'datetime',
+					range: '~' //或 range: '~' 来自定义分割字符
+				});
+
+				// 创建通知按钮事件
+				$("#cjtz").click(function() {
+					layer.open({
+						title: '创建通知',
+						type: 1,
+						content: $("#fbck"),
+						area: ['800px', '630px']
+					});
+				});
+
+				// 删除按钮事件
+				$("#del").click(function() {
+					layer.open({
+						title: '删除通知',
+						type: 0,
+						content: '确认删除？',
+						btn: ['确定', '取消']
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
