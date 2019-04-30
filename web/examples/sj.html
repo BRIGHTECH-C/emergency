@@ -359,7 +359,7 @@
 						<div class="layui-btn-container layui-inline">
 							<button class="layui-btn">上报委领导</button>
 							<button class="layui-btn">上报市应急局</button>
-							<button class="layui-btn">转发</button>
+							<button class="layui-btn" id="zf">转发</button>
 						</div>
 						<form class="layui-form layui-inline" action="">
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="办结归档">
@@ -800,6 +800,16 @@
 							type: 1,
 							content: $("#xqck"),
 							area: '1440px'
+						});
+					});
+					
+					// 转发
+					$("#zf").click(function() {
+						layer.open({
+							title: '转发对象',
+							type: 2,
+							content: './dtree.html',
+							area: ['300px','400px']
 						});
 					});
 

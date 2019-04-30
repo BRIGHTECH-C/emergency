@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+		<link rel="stylesheet" href="../dtree/dtree.css">
+		<link rel="stylesheet" href="../dtree/font/dtreefont.css">
+	</head>
+	<body>
+		
+		<ul id="demoTree" class="dtree" data-id="0"></ul>
+		
+		<script src="../src/layui.js"></script>
+		<script src="../dtree/dtree.js"></script>
+		<script>
+			  layui.extend({
+				dtree: '{/}layui_ext/dtree/dtree'   // {/}的意思即代表采用自有路径，即不跟随 base 路径
+			  }).use(['dtree','layer','jquery'], function(){
+				var dtree = layui.dtree, layer = layui.layer, $ = layui.jquery;
+				
+				var DemsoTree = dtree.render({
+				  elem: "#demoTree",
+				  url: "./json/table/dtree.json",
+				  method: "get",
+				  type: "all",
+				  checkbar: true,  
+				  checkbarType: "no-all",
+				  initLevel: "1"
+				});
+				
+			  });
+		</script>
+	</body>
+</html>

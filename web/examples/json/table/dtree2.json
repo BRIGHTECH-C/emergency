@@ -5,6 +5,60 @@
   },
   "data": [
     {
+      "id": "006",
+      "title": "委领导",
+      "isLast": false,
+      "level": "1",
+      "parentId": "0",
+      "checkArr": [
+        {
+          "type": "0",
+          "isChecked": "0"
+        }
+      ],
+      "children": [
+        {
+          "id": "006001",
+          "title": "主任",
+          "isLast": true,
+          "parentId": "006",
+          "checkArr": [
+            {
+              "type": "0",
+              "isChecked": "0"
+            }
+          ],
+          "level": "2"
+        },
+        {
+          "id": "006004",
+          "title": "副主任",
+          "isLast": true,
+          "parentId": "006",
+          "checkArr": [
+            {
+              "type": "0",
+              "isChecked": "0"
+            }
+          ],
+          "level": "2"
+        },
+        {
+          "id": "006003",
+          "title": "副主任",
+          "isLast": true,
+          "parentId": "006",
+          "checkArr": [
+            {
+              "type": "0",
+              "isChecked": "0"
+            }
+          ],
+          "level": "2"
+        }
+      ]
+    },
+    {
       "id": "001",
       "title": "委内处室",
       "isLast": false,
@@ -157,6 +211,47 @@
           "title": "快轨公司",
           "isLast": true,
           "parentId": "004",
+          "checkArr": [
+            {
+              "type": "0",
+              "isChecked": "0"
+            }
+          ],
+          "level": "2"
+        }
+      ]
+    },
+    {
+      "id": "005",
+      "title": "项目施工单位",
+      "isLast": false,
+      "level": "1",
+      "parentId": "0",
+      "checkArr": [
+        {
+          "type": "0",
+          "isChecked": "0"
+        }
+      ],
+      "children": [
+        {
+          "id": "005001",
+          "title": "单位1",
+          "isLast": true,
+          "parentId": "005",
+          "checkArr": [
+            {
+              "type": "0",
+              "isChecked": "0"
+            }
+          ],
+          "level": "2"
+        },
+        {
+          "id": "005004",
+          "title": "单位2",
+          "isLast": true,
+          "parentId": "005",
           "checkArr": [
             {
               "type": "0",

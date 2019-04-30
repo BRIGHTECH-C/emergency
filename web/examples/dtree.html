@@ -21,7 +21,7 @@
 				
 				var DemsoTree = dtree.render({
 				  elem: "#demoTree",
-				  url: "./json/table/dtree.json",
+				  url: "./json/table/dtree2.json",
 				  method: "get",
 				  type: "all",
 				  checkbar: true,  
@@ -29,9 +29,6 @@
 				  initLevel: "1"
 				});
 				
-				dtree.on("node('demoTree')" ,function(obj){
-				  layer.msg(JSON.stringify(obj.param));
-				});
 			  });
 		</script>
 	</body>
