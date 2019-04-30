@@ -45,7 +45,7 @@
 		<div class="layui-tab">
 
 			<!-- 页签头部 -->
-			<ul class="layui-tab-title layui-col-md-offset1 layui-inline" style="width: 80%;">
+			<ul class="layui-tab-title layui-col-md-offset2 layui-inline" style="width: 80%;">
 				<li class="layui-this tab-head">
 					<h3>待办事项</h3>
 				</li>
@@ -58,7 +58,7 @@
 			<div class="layui-tab-content">
 				<div class="layui-tab-item layui-show layui-row">
 					<!-- 时间线主体 -->
-					<ul class="layui-timeline layui-col-md-offset1">
+					<ul class="layui-timeline layui-col-md-offset2">
 						
 						<li class="layui-timeline-item">
 							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
@@ -266,7 +266,7 @@
 				</div>
 
 				<!-- 第二页签模块 -->
-				<div class="layui-tab-item layui-col-md-offset1">
+				<div class="layui-tab-item" style="margin-left: 10%;">
 
 					<!-- 预警历史数据表查询条件 -->
 					<form class="layui-form" action="" style="margin-left: -70px;">
@@ -326,10 +326,10 @@
 				<form class="layui-form" action="">
 					<div class="layui-form-item">
 						<div class="layui-input-block">
-							<input type="radio" name="sex" value="全部" title="全部" checked>
-							<input type="radio" name="sex" value="领导" title="委领导">
-							<input type="radio" name="sex" value="区级单位" title="二级单位">
-							<input type="radio" name="sex" value="施工单位" title="施工单位">
+							<input type="radio" name="sex" value="全部" title="全部(2000/2300)" checked>
+							<input type="radio" name="sex" value="领导" title="委领导(8/8)">
+							<input type="radio" name="sex" value="区级单位" title="区级单位(22/23)">
+							<input type="radio" name="sex" value="施工单位" title="施工单位(2000/2269)">
 						</div>
 					</div>
 				</form>
@@ -343,7 +343,7 @@
 						<div class="layui-col-md12">标题：市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
 					</div>
 					<div class="layui-row" style="margin-bottom: 5px;">
-						<div class="layui-col-md6">级别：四级</div>
+						<div class="layui-col-md6">级别：4级</div>
 						<div class="layui-col-md6">类别：恶劣天气</div>
 					</div>
 					<div class="layui-row" style="margin-bottom: 5px;">
@@ -380,10 +380,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0">一级</option>
-									<option value="1">二级</option>
-									<option value="2" selected>三级</option>
-									<option value="3">四级</option>、
+									<option value="0">1级</option>
+									<option value="1">2级</option>
+									<option value="2" selected>3级</option>
+									<option value="3">4级</option>、
 								</select>
 							</div>
 						</div>
@@ -464,7 +464,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -499,10 +499,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0">一级</option>
-									<option value="1">二级</option>
-									<option value="2" selected>三级</option>
-									<option value="3">四级</option>、
+									<option value="0">1级</option>
+									<option value="1">2级</option>
+									<option value="2" selected>3级</option>
+									<option value="3">4级</option>、
 								</select>
 							</div>
 						</div>
@@ -583,7 +583,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -618,10 +618,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0">一级</option>
-									<option value="1">二级</option>
-									<option value="2">三级</option>
-									<option value="3" selected>四级</option>、
+									<option value="0">1级</option>
+									<option value="1">2级</option>
+									<option value="2">3级</option>
+									<option value="3" selected>4级</option>、
 								</select>
 							</div>
 						</div>
@@ -702,7 +702,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -737,10 +737,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0" selected>一级</option>
-									<option value="1">二级</option>
-									<option value="2">三级</option>
-									<option value="3">四级</option>、
+									<option value="0" selected>1级</option>
+									<option value="1">2级</option>
+									<option value="2">3级</option>
+									<option value="3">4级</option>、
 								</select>
 							</div>
 						</div>
@@ -821,7 +821,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -856,10 +856,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0" selected>一级</option>
-									<option value="1">二级</option>
-									<option value="2">三级</option>
-									<option value="3">四级</option>、
+									<option value="0" selected>1级</option>
+									<option value="1">2级</option>
+									<option value="2">3级</option>
+									<option value="3">4级</option>、
 								</select>
 							</div>
 						</div>
@@ -940,7 +940,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -955,7 +955,7 @@
 					</div>
 					<div class="layui-form-item">
 						<div class="layui-input-block">
-							<button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+							<button class="layui-btn" lay-submit lay-filter="formDemo">立即解除</button>
 							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 						</div>
 					</div>
@@ -977,10 +977,10 @@
 							<div class="layui-input-block">
 								<select name="city" lay-verify="required">
 									<option value=""></option>
-									<option value="0">一级</option>
-									<option value="1">二级</option>
-									<option value="2">三级</option>
-									<option value="3">四级</option>、
+									<option value="0">1级</option>
+									<option value="1">2级</option>
+									<option value="2">3级</option>
+									<option value="3">4级</option>、
 								</select>
 							</div>
 						</div>
@@ -1061,7 +1061,7 @@
 							<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
-							<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="2级单位">
 							<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
 							<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 						</div>
@@ -1260,7 +1260,7 @@
 							title: '预警发布',
 							type: 1,
 							content: $("#fbck1"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 					$("#fb2").click(function() {
@@ -1268,7 +1268,7 @@
 							title: '预警发布',
 							type: 1,
 							content: $("#fbck2"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 					$("#fb3").click(function() {
@@ -1276,7 +1276,7 @@
 							title: '预警发布',
 							type: 1,
 							content: $("#fbck3"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 					$("#fb4").click(function() {
@@ -1284,7 +1284,7 @@
 							title: '预警发布',
 							type: 1,
 							content: $("#fbck4"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 					$("#fb5").click(function() {
@@ -1292,7 +1292,7 @@
 							title: '预警发布',
 							type: 1,
 							content: $("#fbck5"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 					
@@ -1302,7 +1302,7 @@
 							title: '新增预警',
 							type: 1,
 							content: $("#xzck"),
-							area: ['800px', '630px']
+							area: ['800px', '757px']
 						});
 					});
 
