@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>北京市建筑工程事故值守应急系统</title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+	</head>
+	<body>
+			<div class="layui-container" style="width: 780px;">
+				<div class="layui-row" style="margin-bottom: 5px;">
+					<div class="layui-col-md12">标题：市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+				</div>
+				<div class="layui-row" style="margin-bottom: 5px;">
+					<div class="layui-col-md6">级别：四级</div>
+					<div class="layui-col-md6">类别：恶劣天气</div>
+				</div>
+				<div class="layui-row" style="margin-bottom: 5px;">
+					<div class="layui-col-md6">信息来源：市气象局</div>
+					<div class="layui-col-md6">发布时间：2017-09-27 14:17:00</div>
+				</div>
+				<div class="layui-row" style="margin-bottom: 5px;">
+					<div class="layui-col-md12">
+						<div style="margin-bottom: 5px;">预警内容：</div>
+						<div class="layui-textarea" style="width: 700px;">
+							市气象台2018年10月25日16时30分发布大风蓝色预警信号，受冷空气影响，预计25日夜间到26日，
+							本市将有4、5级偏北风，阵风可达7级左右。
+						</div>
+					</div>
+				</div>
+				<div class="layui-row" style="margin-bottom: 5px;">
+					<div class="layui-col-md6">附件：<a href='../src/test_file.doc' class='layui-table-link layui-re' style="color: #1E9FFF;">测试反馈附件</a></div>
+				</div>
+			</div>
+		</div>
+<!-- layui.js文件引入 -->
+				<script src="../src/layui.js"></script>
+				<script>
+					//引入所需layui模块
+					layui.use(['element', 'jquery', 'layer', 'laydate', 'form', 'upload', 'table'], function() {
+						var element = layui.element,
+							$ = layui.$,
+							layer = layui.layer,
+							form = layui.form,
+							laydate = layui.laydate,
+							table = layui.table,
+							upload = layui.upload;
+	
+						// 预警接收进度表数据填充
+						table.render({
+							elem: '#jsjdb',
+							skin: 'nob',
+							url: './table/jsjd.json',
+							cols: [
+								[{
+									field: 'company',
+									title: '接收单位',
+									width: 120,
+									fixed: 'left'
+								}, {
+									field: 'username',
+									title: '接收人',
+									width: 80
+								}, {
+									field: 'phone',
+									title: '接收人手机号',
+									width: 120
+								}, {
+									field: 'time',
+									title: '接收时间',
+									width: 150
+								}, {
+									field: 'state',
+									title: '接收状态',
+									width: 177
+								}]
+							]
+						});
+	
+						// 预警历史数据表数据填充
+						table.render({
+							elem: '#lssj',
+							skin: 'nob',
+							url: './table/yj.json',
+							width: 1200,
+							page: {
+								count: 100,
+								limit: 10,
+								limits: [10, 20, 30]
+							},
+							cols: [
+								[{
+										field: 'level',
+										title: '级别',
+										templet: function(obj) {
+											var color = "#FF0000"
+											switch (obj.level) {
+												case 2:
+													color = "#FF9900";
+													break;
+												case 3:
+													color = "#FFFF00";
+													break;
+												case 4:
+													color = "#0000FF";
+													break;
+											}
+											return "<div style='background-color: " + color +
+												";width: 70px;height: 10px;margin-top: 5px;'> </div>"
+										},
+										width: 100
+									},
+									{
+										field: 'title',
+										title: '预警标题',
+										event: 'detail',
+										width: 450
+									},
+									{
+										field: 'time',
+										title: '发生时间',
+										width: 150
+									},
+									{
+										field: 'mesf',
+										title: '信息来源',
+										width: 120
+									},
+									{
+										field: 'type',
+										title: '预警类型',
+										width: 120
+									},
+									{
+										field: 'progress',
+										title: '接收进度',
+										event: 'progdt',
+										templet: function(obj) {
+											return "<div class='layui-progress layui-progress-big' lay-showPercent='yes'>" +
+												"<div class='layui-progress-bar layui-bg-green' lay-percent='" + obj.progress + "%'></div>" +
+												"</div>";
+										},
+										width: 250
+									}
+								]
+							],
+							done: function(res, curr, count) {
+								element.render();
+							}
+						});
+	
+						// 预警历史数据表,预警标题字段监听,点击弹出预警详情窗口
+						table.on('tool(lssj)', function(obj) {
+							var data = obj.data;
+							if (obj.event === 'detail') {
+								layer.open({
+									title: '预警详情',
+									type: 1,
+									content: $("#yjxqck"),
+									area: '800px'
+								});
+							} else if (obj.event === 'progdt') {
+								layer.open({
+									title: '接收进度',
+									type: 1,
+									content: $("#jsjdck"),
+									area: '800px'
+								});
+							}
+						});
+	
+						// 文件上传元素初始化
+						var uploadInst = upload.render({
+							elem: '#file',
+							url: '/upload/'
+						});
+	
+						// layui时间模块初始化
+						laydate.render({
+							elem: '#sj',
+							type: 'datetime'
+						});
+	
+						// 监听预警接收进度条,点击弹出预警接收进度表
+						$(".jd").click(function() {
+							layer.open({
+								title: '接收进度',
+								type: 1,
+								content: $("#jsjdck"),
+								area: '800px'
+							});
+						});
+	
+						// 发布按钮事件
+						$("#fb1").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck1"),
+								area: ['800px', '630px']
+							});
+						});
+						$("#fb2").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck2"),
+								area: ['800px', '630px']
+							});
+						});
+						$("#fb3").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck3"),
+								area: ['800px', '630px']
+							});
+						});
+						$("#fb4").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck4"),
+								area: ['800px', '630px']
+							});
+						});
+						$("#fb5").click(function() {
+							layer.open({
+								title: '预警发布',
+								type: 1,
+								content: $("#fbck5"),
+								area: ['800px', '630px']
+							});
+						});
+						
+						// 添加按钮事件
+						$("#add").click(function() {
+							layer.open({
+								title: '新增预警',
+								type: 1,
+								content: $("#xzck"),
+								area: ['800px', '630px']
+							});
+						});
+	
+						// 删除按钮事件
+						$(".del").click(function() {
+							layer.open({
+								title: '删除预警信息',
+								type: 0,
+								content: '确认删除？',
+								btn: ['确定', '取消']
+							});
+						});
+						
+						// 解除按钮事件
+						$("#jc").click(function() {
+							layer.open({
+								title: '解除预警信息',
+								type: 0,
+								content: '确认解除？',
+								btn: ['确定', '取消']
+							});
+						});
+					});
+				</script>
+		</body>
+	</html>

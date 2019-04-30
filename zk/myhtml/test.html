@@ -81,10 +81,10 @@
 							<button class="layui-btn" style="float: right;" href="#" id="yjtc">新增</button>
 						</div>
 						<div class="layui-card-body">
-							<a style="color:red" " href=" #" id="yjtc">大风红色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:orangered" href="../myhtml/yjxx.html">暴雨橙色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:yellow" href="../myhtml/yjxx.html">雾霾黄色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:blue" href="../myhtml/yjxx.html">沙尘蓝色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a>
+							<span style="color:red" id="yjxq">市气象局发布大风红色预警</span><a style="float:right;" href="javascript:;">更新&nbsp;&nbsp;删除</a><br>
+							<span style="color:yellow" id="yjxq1">市气象局发布森林火险黄色预警</span><span id="yjfb" style="float:right;">发布&nbsp;&nbsp;删除</span><br>
+							<span style="color:orange" id="yjxq2">市气象局发布雾霾橙色预警</span><a style="float:right;" href="javascript:;">解除&nbsp;&nbsp;删除</a><br>
+							<span style="color:blue" id="yjxq3">市气象局发布沙尘蓝色预警</span><a style="float:right;" href="javascript:;">解除&nbsp;&nbsp;删除</a>
 						</div>
 					</div>
 				</div>
@@ -96,10 +96,10 @@
 							<button class="layui-btn" style="float: right;" href="#" id="sjtc">新增</button>
 						</div>
 						<div class="layui-card-body">
-							<a href="../myhtml/tfsj.html">北京市海淀区一在建工地发生事故</a><br>
-							<a href="../myhtml/tfsj.html">东城区发生一起群体上访情况</a><br>
-							<a href="../myhtml/tfsj.html">顺义区一在建工地发生食物中毒事件情况说明</a><br>
-							<a href="../myhtml/tfsj.html">通州区发生一起火情</a>
+							<span id="sjxq">北京市海淀区一在建工地发生事故</span><br>
+							<span id="sjxq1">东城区发生一起群体上访情况</span><br>
+							<span id="sjxq2">顺义区一在建工地发生食物中毒事件情况说明</span><br>
+							<span id="sjxq3">通州区发生一起火情</span><br>
 						</div>
 					</div>
 				</div>
@@ -111,13 +111,13 @@
 							<button class="layui-btn" style="float: right;" href="#" id="hytc">新增</button>
 						</div>
 						<div class="layui-card-body">
-							<a href="../myhtml/tzgg.html">关于北京建筑工程事应急指挥平台上云期间有关工作通知</a><img src="../dist/images/下载.png" style="float:right;"
+							<span id="hyxq">关于北京建筑工程事应急指挥平台上云期间有关工作通知</span><img src="../dist/images/下载.png" style="float:right;"
 							 background-size:50px 100px;class="layui-nav-img"><br>
-							<a href="../myhtml/tzgg.html">关于做好大风蓝色预警响应工作的通知</a><br>
-							<a href="../myhtml/tzgg.html">月份安全生产和绿色施工管理视频会议</a><img src="../dist/images/下载.png" style="float:right;"
+							<span id="hyxq1">关于做好大风蓝色预警响应工作的通知</span><br>
+							<span id="hyxq2">月份安全生产和绿色施工管理视频会议</span><img src="../dist/images/下载.png" style="float:right;"
 							 background-size:50px 100px;class="layui-nav-img"><br>
-							<a href="../myhtml/tzgg.html">关于继续做好大风蓝色预警响应工作的通知</a><br>
-							<a href="../myhtml/tzgg.html">关于做好大风蓝色预警响应工作的通知</a>
+							<span id="hyxq3">关于继续做好大风蓝色预警响应工作的通知</span><br>
+							<span id="hyxq4">关于做好大风蓝色预警响应工作的通知</span>
 						</div>
 					</div>
 				</div>
@@ -169,6 +169,146 @@
 								shade: 0.2, //透明度
 								area: ['1000px', '650px'], // 窗口宽高设置
 								content: './新建突发事件.html' //跳转路径
+							});
+						});
+						$("#sjxq").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '事件详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1500px', '650px'], // 窗口宽高设置
+								content: './突发事件详情.html' //跳转路径
+							});
+						});
+						$("#sjxq1").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '事件详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1500px', '650px'], // 窗口宽高设置
+								content: './突发事件详情.html' //跳转路径
+							});
+						});
+						$("#sjxq2").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '事件详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1500px', '650px'], // 窗口宽高设置
+								content: './突发事件详情.html' //跳转路径
+							});
+						});
+						$("#sjxq3").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '事件详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1500px', '650px'], // 窗口宽高设置
+								content: './突发事件详情.html' //跳转路径
+							});
+						});
+						$("#hyxq").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '通知公告详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1000px', '550px'], // 窗口宽高设置
+								content: './通知公告详情.html' //跳转路径
+							});
+						});
+						$("#hyxq1").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '通知公告详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1000px', '550px'], // 窗口宽高设置
+								content: './通知公告详情.html' //跳转路径
+							});
+						});
+						$("#hyxq2").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '通知公告详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1000px', '550px'], // 窗口宽高设置
+								content: './通知公告详情.html' //跳转路径
+							});
+						});
+						$("#hyxq3").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '通知公告详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1000px', '550px'], // 窗口宽高设置
+								content: './通知公告详情.html' //跳转路径
+							});
+						});
+						$("#hyxq4").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '通知公告详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['1000px', '550px'], // 窗口宽高设置
+								content: './通知公告详情.html' //跳转路径
+							});
+						});
+						$("#yjxq").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '预警详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['800px', '350px'], // 窗口宽高设置
+								content: './预警详情.html' //跳转路径
+							});
+						});
+						$("#yjxq1").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '预警详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['800px', '350px'], // 窗口宽高设置
+								content: './预警详情.html' //跳转路径
+							});
+						});
+						$("#yjxq2").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '预警详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['800px', '350px'], // 窗口宽高设置
+								content: './预警详情.html' //跳转路径
+							});
+						});
+						$("#yjxq3").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '预警详情', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['800px', '350px'], // 窗口宽高设置
+								content: './预警详情.html' //跳转路径
+							});
+						});
+							$("#yjfb").on('click', function() {
+							layer.open({
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '预警发布', //弹出窗口名字 
+								shadeClose: true,
+								shade: 0.2, //透明度
+								area: ['900px', '650px'], // 窗口宽高设置
+								content: './预警发布.html' //跳转路径
 							});
 						});
 						//监听导航点击
