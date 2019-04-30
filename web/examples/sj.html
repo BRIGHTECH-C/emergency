@@ -45,7 +45,7 @@
 		<div class="layui-tab">
 
 			<!-- 页签头部 -->
-			<ul class="layui-tab-title layui-col-md-offset1 layui-inline" style="width: 80%;">
+			<ul class="layui-tab-title layui-col-md-offset2 layui-inline" style="width: 80%;">
 				<li class="layui-this tab-head">
 					<h3>待办事项</h3>
 				</li>
@@ -58,7 +58,7 @@
 			<div class="layui-tab-content">
 				<div class="layui-tab-item layui-show layui-row">
 					<!-- 时间线主体 -->
-					<ul class="layui-timeline layui-col-md-offset1">
+					<ul class="layui-timeline layui-col-md-offset2">
 
 						<li class="layui-timeline-item">
 							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
@@ -146,10 +146,10 @@
 				</div>
 
 				<!-- 第二页签模块 -->
-				<div class="layui-tab-item layui-col-md-offset1">
+				<div class="layui-tab-item layui-col-md-offset2">
 					<div class="layui-row">
 						<!-- 事件历史数据表查询条件 -->
-						<form class="layui-form layui-col-md11" action="">
+						<form class="layui-form layui-col-md12" action="" style="margin-left: -60px;">
 							<div class="layui-form-item">
 								<div class="layui-input-inline">
 									<label class="layui-form-label">标题</label>
@@ -526,7 +526,7 @@
 									<div class="layui-colla-title">
 										2019-04-20 17:00 上报•委领导
 									</div>
-									<div class="layui-colla-content layui-show">已接收。主任，2019-04-20 17:03<br>已接收。副主任，2019-04-20 17:03<br>未接收。副主任</div>
+									<div class="layui-colla-content">已接收。主任，2019-04-20 17:03<br>已接收。副主任，2019-04-20 17:03<br>未接收。副主任</div>
 								</div>
 							</div>
 							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
@@ -534,7 +534,7 @@
 									<div class="layui-colla-title">
 										2019-04-20 16:00 上报市应急管理局。
 									</div>
-									<div class="layui-colla-content layui-show">已接收。市应急，50505050，2019-04-20 16:03</div>
+									<div class="layui-colla-content">已接收。市应急，50505050，2019-04-20 16:03</div>
 								</div>
 							</div>
 							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
@@ -542,7 +542,7 @@
 									<div class="layui-colla-title">
 										2019-04-19 16:55 朝阳区建委核报。
 									</div>
-									<div class="layui-colla-content layui-show">已接收。应急处，601010102，2019-04-19 16:58</div>
+									<div class="layui-colla-content">已接收。应急处，601010102，2019-04-19 16:58</div>
 								</div>
 							</div>
 							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
@@ -550,7 +550,7 @@
 									<div class="layui-colla-title">
 										2019-04-19 11:55 转发朝阳区建委
 									</div>
-									<div class="layui-colla-content layui-show">已接收。赵工，86868686，2019-04-19 11:58</div>
+									<div class="layui-colla-content">已接收。赵工，86868686，2019-04-19 11:58</div>
 								</div>
 							</div>
 							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
@@ -558,7 +558,7 @@
 									<div class="layui-colla-title">
 										2019-04-18 11:58 接收市应急管理局核报
 									</div>
-									<div class="layui-colla-content layui-show">已接收。应急处，601010102，2019-04-19 11:58</div>
+									<div class="layui-colla-content">已接收。应急处，601010102，2019-04-19 11:58</div>
 								</div>
 							</div>
 						</div>
@@ -568,6 +568,33 @@
 					<fieldset class="layui-elem-field">
 						<legend>相关接报</legend>
 						<div class="layui-field-box" style="min-height: 150px;">
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（上报•委领导 2019-04-20 17:00）</h3>
+								<hr style=" height:2px;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
 							<blockquote class="layui-elem-quote layui-quote-nm">
 								<h3>朝阳区孙河乡工地内一工人坠亡（上报•市应急管理局 2019-04-20 16:00）</h3>
 								<hr style=" height:2px;border-top:2px dotted #185598;" />
@@ -699,7 +726,7 @@
 						elem: '#lssj',
 						skin: 'nob',
 						url: './json/table/sj.json',
-						width: 1220,
+						width: 1060,
 						page: {
 							count: 100,
 							limit: 10,
@@ -732,13 +759,7 @@
 								},
 								{
 									field: 'name',
-									title: '填报人',
-									align: 'center',
-									width: 150
-								},
-								{
-									field: 'state',
-									title: '状态',
+									title: '接收人',
 									align: 'center',
 									width: 150
 								}
