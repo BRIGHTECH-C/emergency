@@ -162,10 +162,11 @@
 									<div class="layui-input-block" style="width: 150px;">
 										<select name="city">
 											<option value=""></option>
-											<option value="0">红</option>
-											<option value="1">橙</option>
-											<option value="2">黄</option>
-											<option value="3">篮</option>、
+											<option value="0">待定</option>
+											<option value="1">Ⅰ级（特别重大）</option>
+											<option value="2">Ⅱ级（重大）</option>
+											<option value="3">Ⅲ级（较大）</option>
+											<option value="4">Ⅳ级（一般）</option>
 										</select>
 									</div>
 								</div>
@@ -174,11 +175,11 @@
 									<div class="layui-input-block" style="width: 120px;">
 										<select name="city">
 											<option value=""></option>
-											<option value="0">大风</option>
-											<option value="1">暴雨</option>
-											<option value="2">高温</option>
-											<option value="3">恶劣天气</option>
-											<option value="4">空气重污染</option>
+											<option value="0">事故灾难</option>
+											<option value="1">社会安全</option>
+											<option value="2">自然灾害</option>
+											<option value="3">公共卫生</option>
+											<option value="4">其他</option>
 										</select>
 									</div>
 								</div>
@@ -744,17 +745,10 @@
 						var data = obj.data;
 						if (obj.event === 'detail') {
 							layer.open({
-								title: '预警详情',
+								title: '事件详情',
 								type: 1,
-								content: $("#yjxqck"),
-								area: '800px'
-							});
-						} else if (obj.event === 'progdt') {
-							layer.open({
-								title: '接收进度',
-								type: 1,
-								content: $("#jsjdck"),
-								area: '800px'
+								content: $("#xqck"),
+								area: '1440px'
 							});
 						}
 					});
@@ -772,6 +766,12 @@
 							type: 'datetime'
 						});
 					})
+					
+					laydate.render({
+						elem: '#time',
+						type: 'datetime',
+						range: '~'
+					});
 
 
 					// 监听预警接收进度条,点击弹出预警接收进度表
