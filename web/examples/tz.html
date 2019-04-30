@@ -164,8 +164,11 @@
 					<label class="layui-form-label">发送范围</label>
 					<div class="layui-input-block">
 						<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
-						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
-						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 					</div>
 				</div>
 				<div class="layui-form-item layui-form-text">
@@ -252,8 +255,11 @@
 					<label class="layui-form-label">发送范围</label>
 					<div class="layui-input-block">
 						<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
-						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
-						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="委领导">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="区级住建单位">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="二级单位">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="施工单位">
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义" lay-filter="dtree">
 					</div>
 				</div>
 				<div class="layui-form-item layui-form-text">
@@ -416,6 +422,18 @@
 					type: 'datetime',
 					range: '~' //或 range: '~' 来自定义分割字符
 				});
+				
+				// 自定义发送对象树形菜单
+				form.on('checkbox(dtree)',function(){
+					if($(this).prop('checked')==true){
+						layer.open({
+							title: '发送对象',
+							type: 2,
+							content: './dtree2.html',
+							area: ['300px','400px']
+						});
+					}
+				})
 
 				// 创建通知按钮事件
 				$("#cjtz").click(function() {
