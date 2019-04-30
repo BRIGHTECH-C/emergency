@@ -6,92 +6,154 @@
 		<link rel="stylesheet" href="../src/css/layui.css">
 	</head>
 	<body>
-		<!-- 预警标题 -->
 		<form class="layui-form" action="">
 			<div class="layui-form-item">
-				<label class="layui-form-label">标题:</label>
-				<div class="layui-input-block">
-					<input type="text" style="width:600px; name=" title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
-					 class="layui-input">
+				<label class="layui-form-label">标题</label>
+				<div class="layui-input-block" style="width: 82%;">
+					<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 			<div class="layui-form-item">
-				<!-- layui-form-item表单组件，默认占一行 -->
 				<div class="layui-inline">
-					<!-- layui-inline表示行内元素不单独占一行 -->
-					<label class="layui-form-label">级别</label>
-					<div class="layui-input-block" style="width:235px;">
-						<select name="interest" lay-filter="aihao">
-							<option value="">请选择</option>
-							<option value="0">一级</option>
-							<option value="1">二级</option>
-							<option value="2">三级</option>
-							<option value="3">四级</option>
-						</select>
+					<label class="layui-form-label">接收人</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" placeholder="请输入接收人" class="layui-input">
 					</div>
 				</div>
 				<div class="layui-inline">
-					<label class="layui-form-label">类别</label>
-					<div class="layui-input-block" style="width:240px;">
-						<select name="interest" lay-filter="aihao">
-							<option value="">请选择</option>
-							<option value="0">大风</option>
-							<option value="1">暴雨</option>
-							<option value="2">高温</option>
-							<option value="3">恶劣天气</option>
-							<option value="3">空气重污染</option>
+					<label class="layui-form-label">接收时间</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请选择接收时间" class="layui-input jsfrom-time" />
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">接收方式</label>
+					<div class="layui-input-block" style="width: 69%;">
+						<select name="city" lay-verify="required" placeholder="请选择接收方式">
+							<option value="">待定</option>
+							<option value="0">市系统对接</option>
+							<option value="1">本系统填报</option>
+							<option value="2">传真</option>
+							<option value="3">电话</option>
+							<option value="3">其他</option>
 						</select>
 					</div>
 				</div>
 			</div>
 			<div class="layui-form-item">
 				<div class="layui-inline">
-					<!-- layui-inline表示行内元素不单独占一行 -->
-					<label class="layui-form-label">信息来源</label>
-					<div class="layui-input-block" style="width:235px;">
-						<select name="interest" lay-filter="aihao">
-							<option value="">请选择</option>
-							<option value="">市气象局</option>
-							<option value="0">市防汛办</option>
-							<option value="1">市应急管理局</option>
+					<label class="layui-form-label">报送单位</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" placeholder="请输入报送单位" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">联系人</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" placeholder="请输入联系人" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">联系电话</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" placeholder="请输入联系电话" class="layui-input" style="width: 215px;">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">报送时间</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请选择报送时间" class="layui-input jsfrom-time" />
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">情况类别</label>
+					<div class="layui-input-block">
+						<select name="city" lay-verify="required">
+							<option value=""></option>
+							<option value="0">事故灾难</option>
+							<option value="0">社会安全</option>
+							<option value="0">自然灾害</option>
+							<option value="0">公共卫生</option>
+							<option value="0">其他</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<select name="city" lay-verify="required">
+						<option value=""></option>
+						<option value="0">建筑工程事故</option>
+						<option value="0">轨道交通</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">事发时间</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请选择事发时间" class="layui-input jsfrom-time" />
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">事发地点</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请输入事发地点" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">事件级别</label>
+					<div class="layui-input-block">
+						<select name="city" lay-verify="required" placeholder="请选择事件级别">
+							<option value="">待定</option>
+							<option value="0">Ⅰ级（特别重大）</option>
+							<option value="1">Ⅱ级（重大）</option>
+							<option value="2">Ⅲ级（较大）</option>
+							<option value="3">Ⅳ级（一般）</option>
 						</select>
 					</div>
 				</div>
 			</div>
-			
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">工程名称</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请输入工程名称" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">施工单位</label>
+					<div class="layui-input-block">
+						<input type="text" name="time" placeholder="请输入施工单位" class="layui-input" />
+					</div>
+				</div>
+			</div>
 			<div class="layui-form-item layui-form-text">
-				<label class="layui-form-label">普通文本域</label>
-				<div class="layui-input-block" style="width:600px;">
-					<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+				<label class="layui-form-label">情况摘要</label>
+				<div class="layui-input-block" style="width: 83%;">
+					<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
 				</div>
 			</div>
-
-			<div class="layui-form-item" pane="">
-				<label class="layui-form-label">发送范围</label>
-				<div class="layui-input-block">
-					<input type="checkbox" name="like1[write]" lay-skin="primary" title="全部">
-					<input type="checkbox" name="like1[read]" lay-skin="primary" title="区县">
-					<input type="checkbox" name="like1[game]" lay-skin="primary" title="自定义">
-				</div>
-			</div>
-
-			<div class="layui-form-item" pane="">
+			<div class="layui-form-item layui-form-text">
 				<label class="layui-form-label">发送方式</label>
 				<div class="layui-input-block">
-					<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="">
-					<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP" checked="">
-					<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="">
+					<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+					<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+					<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
 				</div>
 			</div>
-
-			<div class="layui-upload"><br><br><br>
-				<div class="layui-inline" style="padding-left:200px;">
-					<button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>上传文件</button>
-					<button class="layui-btn">发布</button>
-					<button class="layui-btn">取消</button>
+				<div class="layui-col-md12">
+				<div style="float: left; margin-top: 20px; padding-left:320px;">
+					<div class="layui-btn-container layui-inline">
+						<button class="layui-btn">上报委领导</button>
+						<button class="layui-btn">上报市应急局</button>
+						<button class="layui-btn">转发</button>
+					</div>
 				</div>
 			</div>
-
+			</div>
+		</form>
+		</div>
 		</form>
 		<script src="../src/layui.js"></script>
 		<script>

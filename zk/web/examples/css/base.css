@@ -1,0 +1,7 @@
+.onhover :hover{
+	cursor:pointer;
+}
+.title-hover :hover{
+	cursor:pointer;
+	color: #808069;
+}

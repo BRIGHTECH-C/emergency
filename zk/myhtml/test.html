@@ -17,7 +17,7 @@
 			<li class="layui-nav-item">
 				<a href="javascript:;">值班值守</a>
 				<dl class="layui-nav-child">
-					<dd><a href="">事件管理</a></dd>
+					<dd><a href="../myhtml/tfsj.html">事件管理</a></dd>
 					<dd><a href="">检查抽查</a></dd>
 					<dd><a href="">本级值班</a></dd>
 					<dd><a href="">下级值班</a></dd>
@@ -78,13 +78,13 @@
 						<div class="layui-card-header layui-bg-green">
 							预警发布
 							<span class="layui-badge">4</span>
-							<button class="layui-btn" style="float: right;"href="#" id="yjtc">新增</button>
+							<button class="layui-btn" style="float: right;" href="#" id="yjtc">新增</button>
 						</div>
 						<div class="layui-card-body">
-							<a style="color:red" " href="#" id="yjtc">大风红色预警</a><a style="float:right;"href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:orangered" href="../myhtml/yjxx.html">暴雨橙色预警</a><a style="float:right;"href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:yellow" href="../myhtml/yjxx.html">雾霾黄色预警</a><a style="float:right;"href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
-							<a style="color:blue" href="../myhtml/yjxx.html">沙尘蓝色预警</a><a style="float:right;"href="javascript:;">发布&nbsp;&nbsp;删除</a>
+							<a style="color:red" " href=" #" id="yjtc">大风红色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
+							<a style="color:orangered" href="../myhtml/yjxx.html">暴雨橙色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
+							<a style="color:yellow" href="../myhtml/yjxx.html">雾霾黄色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a><br>
+							<a style="color:blue" href="../myhtml/yjxx.html">沙尘蓝色预警</a><a style="float:right;" href="javascript:;">发布&nbsp;&nbsp;删除</a>
 						</div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 						<div class="layui-card-header layui-bg-green">
 							事件管理
 							<span class="layui-badge">4</span>
-							<button class="layui-btn" style="float: right;"href="#" id="sjtc">新增</button>
+							<button class="layui-btn" style="float: right;" href="#" id="sjtc">新增</button>
 						</div>
 						<div class="layui-card-body">
 							<a href="../myhtml/tfsj.html">北京市海淀区一在建工地发生事故</a><br>
@@ -108,12 +108,14 @@
 						<div class="layui-card-header layui-bg-green">
 							通知公告
 							<span class="layui-badge">5</span>
-							<button class="layui-btn" style="float: right;"href="#" id="hytc">新增</button>
+							<button class="layui-btn" style="float: right;" href="#" id="hytc">新增</button>
 						</div>
 						<div class="layui-card-body">
-							<a href="../myhtml/tzgg.html">关于北京建筑工程事应急指挥平台上云期间有关工作通知</a><img src="../dist/images/下载.png" style="float:right;" background-size:50px 100px;class="layui-nav-img"><br>
+							<a href="../myhtml/tzgg.html">关于北京建筑工程事应急指挥平台上云期间有关工作通知</a><img src="../dist/images/下载.png" style="float:right;"
+							 background-size:50px 100px;class="layui-nav-img"><br>
 							<a href="../myhtml/tzgg.html">关于做好大风蓝色预警响应工作的通知</a><br>
-							<a href="../myhtml/tzgg.html">月份安全生产和绿色施工管理视频会议</a><img src="../dist/images/下载.png" style="float:right;" background-size:50px 100px;class="layui-nav-img"><br>
+							<a href="../myhtml/tzgg.html">月份安全生产和绿色施工管理视频会议</a><img src="../dist/images/下载.png" style="float:right;"
+							 background-size:50px 100px;class="layui-nav-img"><br>
 							<a href="../myhtml/tzgg.html">关于继续做好大风蓝色预警响应工作的通知</a><br>
 							<a href="../myhtml/tzgg.html">关于做好大风蓝色预警响应工作的通知</a>
 						</div>
@@ -132,41 +134,41 @@
 				<script src="../src/layui.js"></script>
 				<script>
 					//引用所需要模块（layer弹窗模块、jquery选择器）
-					layui.use(['element', 'layer','jquery'], function() {
+					layui.use(['element', 'layer', 'jquery'], function() {
 						var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
 						var layer = layui.layer;
 						var $ = layui.$;
 						//yjtc按钮id，click交互样式
-						$("#yjtc").on('click',function(){
+						$("#yjtc").on('click', function() {
 							layer.open({
-								type: 2,//如果type=1 content后跟文字，如果type=2 content后跟路径
-								title: '新建预警',//弹出窗口名字 
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '新建预警', //弹出窗口名字 
 								shadeClose: true,
-								shade: 0.2,//透明度
-								area: ['800px', '550px'],// 窗口宽高设置
+								shade: 0.2, //透明度
+								area: ['800px', '550px'], // 窗口宽高设置
 								content: './预警新增页.html' //跳转路径
 							});
 						});
-						//sjtc按钮id，click交互样式
-						$("#sjtc").on('click',function(){
+						//新增会议通知
+						$("#hytc").on('click', function() {
 							layer.open({
-								type: 2,//如果type=1 content后跟文字，如果type=2 content后跟路径
-								title: '新建事件',//弹出窗口名字 
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '新建会议通知', //弹出窗口名字 
 								shadeClose: true,
-								shade: 0.2,//透明度
-								area: ['800px', '550px'],// 窗口宽高设置
-								content: './新建突发事件.html' //跳转路径
+								shade: 0.2, //透明度
+								area: ['800px', '570px'], // 窗口宽高设置
+								content: './新建会议通知.html' //跳转路径
 							});
 						});
-						//hytc按钮id，click交互样式
-						$("#hytc").on('click',function(){
+						//新增突发事件
+						$("#sjtc").on('click', function() {
 							layer.open({
-								type: 2,//如果type=1 content后跟文字，如果type=2 content后跟路径
-								title: '新建会议',//弹出窗口名字 
+								type: 2, //如果type=1 content后跟文字，如果type=2 content后跟路径
+								title: '新建事件', //弹出窗口名字 
 								shadeClose: true,
-								shade: 0.2,//透明度
-								area: ['800px', '550px'],// 窗口宽高设置
-								content: './新建会议通知.html' //跳转路径
+								shade: 0.2, //透明度
+								area: ['1000px', '650px'], // 窗口宽高设置
+								content: './新建突发事件.html' //跳转路径
 							});
 						});
 						//监听导航点击

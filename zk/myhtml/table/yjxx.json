@@ -1,0 +1,47 @@
+{
+  "result": "success",
+  "info": [
+    {
+      "pubMsgId": "40261e856a4825f2016a6830a72e148b",
+      "title": "北京市气象台2019年4月29日16时30分发布大风蓝色预警信号",
+      "orgName": "北京市气象局",
+      "type": "2c9194e15a8e1fa3015a8e45bd9e0086",
+      "typeName": "大风",
+      "yjlevel": "04",
+      "levelName": "蓝色",
+      "happenDate": "2019-04-29 16:30",
+      "pubtype": "0",
+      "pubtypeName": "首发",
+      "messagetype": "0",
+      "relId": "",
+      "pubreason": [
+        {
+          "textLimit": "140",
+          "showText": "市气象台2019年4月29日16时30分发布大风蓝色预警信号：预计30日00时至23时，本市大部分地区有4、5级偏北风，阵风可达7、8级，局地伴有扬沙，请注意防范。"
+        }
+      ],
+      "pubdistrictName": "北京市"
+    },
+    {
+      "pubMsgId": "40261e8669b9367b016a6759ddfb65b1",
+      "title": "消防安全重要提示信息",
+      "orgName": "市消防局",
+      "happenDate": "2019-04-30 10:00:58",
+      "pubtype": "0",
+      "pubtypeName": "首发",
+      "messagetype": "1",
+      "relId": "40261e8669b9367b016a674b39e66568",
+      "pubreason": [
+        {
+          "textLimit": "63",
+          "showText": "北京消防提示您：我市迎来杨柳絮飘飞季节，请您外出游玩时不要乱扔烟头，不要玩火；请您自觉清扫、湿化杨柳絮等可燃杂物。"
+        },
+        {
+          "textLimit": "140",
+          "showText": "北京消防提示您：我市迎来杨柳絮飘飞季节，请您外出游玩时不要乱扔烟头，不要玩火；请您自觉清扫、湿化杨柳絮等可燃杂物。"
+        }
+      ],
+      "pubdistrictName": "北京市"
+    }
+  ]
+}

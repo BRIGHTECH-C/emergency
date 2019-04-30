@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
+
+	</head>
+	<body>
+
+		<form class="layui-form" action="">
+			<div class="layui-form-item" style="margin-top: 1.875rem;margin-right: 3.125rem;">
+				<label class="layui-form-label">预警标题</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input"
+					 value="关于做好大雨红色预警响应工作的通知">
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">来源单位</label>
+				<div class="layui-input-inline">
+					<select name="modules" lay-verify="required" lay-search="">
+						<option value="">直接选择或搜索选择</option>
+						<option value="1" selected="selected">市气象局</option>
+						<option value="2">市防汛办</option>
+						<option value="3">其他</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">发生时间</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" id="test5" placeholder="yyyy-MM-dd HH:mm:ss" value="2019-04-19 13:20">
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">事件类型</label>
+				<div class="layui-input-inline">
+					<select name="modules" lay-verify="required" lay-search="">
+						<option value="">直接选择或搜索选择</option>
+						<option value="1" selected="selected">大风</option>
+						<option value="2">大雨</option>
+						<option value="3">空气重污染</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">预警级别</label>
+				<div class="layui-input-inline">
+					<select name="modules" lay-verify="required" lay-search="">
+						<option value="">直接选择或搜索选择</option>
+						<option value="1" selected="selected">一级</option>
+						<option value="2">二级</option>
+						<option value="3">三级</option>
+						<option value="4">四级</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">发布类型</label>
+				<div class="layui-input-inline">
+					<select name="modules" lay-verify="required" lay-search="">
+						<option value="">直接选择或搜索选择</option>
+						<option value="1" selected="selected">首发</option>
+						<option value="2">更新</option>
+						<option value="3">解除</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="layui-inline">
+				<label class="layui-form-label">发布范围</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" style="width: 18.75rem;" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+					 class="layui-input" value="北京市">
+				</div>
+			</div>
+
+			<div class="layui-form-item layui-form-text">
+				<label class="layui-form-label">预警内容</label>
+				<div class="layui-input-block">
+					<textarea placeholder="" class="layui-textarea" name="desc">市气象台2018年10月25日16时30分发布大风蓝色预警信号，受冷空气影响，预计25日夜间到26日，本市将有4、5级偏北风，阵风可达7级左右。</textarea>
+				</div>
+			</div>
+
+			<div class="layui-form-item layui-form-text">
+				<label class="layui-form-label">应对措施</label>
+				<div class="layui-input-block">
+					<textarea placeholder="" class="layui-textarea" name="desc">照北京市突发事件应急委员会关于印发北京市大风天气预警分级和应急响应措施（试行）的通知的要求，请各单位停止土方运输、土方开挖、土方回填、房屋拆除以及其他可能产生扬尘污染的施工作业。要求施工企业停止露天攀登及悬空高处作业、停止焊接和切割等室外动火作业、停止临时建筑的安装和拆除、停止脚手架和模板支架的搭设与拆除等。加强防火意识和监督检查，强化建筑工地施工安全及扬尘治理等工作，加强值守应急和信息报告，随时做好应急准备，确保安全。</textarea>
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">发布对象</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="like[read]" title="全部">
+					<input type="checkbox" name="like[read]" title="领导" checked="">
+					<input type="checkbox" name="like[game]" title="区建委" checked="">
+					<input type="checkbox" name="like[game]" title="各处室" checked="">
+					<input type="checkbox" name="like[game]" title="施工单位">
+					<a href="void(0)">自定义</a>
+				</div>
+			</div>
+			
+			<div class="layui-form-item">
+				<label class="layui-form-label">发布方式</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="like[read]" title="PC端" checked="">
+					<input type="checkbox" name="like[read]" title="APP端" checked="">
+					<input type="checkbox" name="like[game]" title="手机短信">
+				</div>
+			</div>
+			<div class="layui-form-item" style="text-align: center;">
+				<button class="layui-btn layui-btn-primary layui-btn-radius">发布</button>	
+			</div>	
+		</form>
+
+	</body>
+	<script src="../layui/layui.all.js" charset="utf-8"></script>
+
+</html>

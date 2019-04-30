@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="../src/css/layui.css">
+		<link rel="stylesheet" href="./css/base.css">
+	</head>
+	<body>
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<ul class="layui-nav" style="text-align: center;">
+			<li class="layui-nav-item"><a href="">首页</a></li>
+			<li class="layui-nav-item"><a href="./yj.1.html">预警发布<span class="layui-badge">2</span></a></li>
+			<li class="layui-nav-item"><a href="">通讯录</a></li>
+			<li class="layui-nav-item"><a href="./tz.html">通知公告</a></li>
+			<li class="layui-nav-item layui-this">
+				<a href="javascript:;">值班值守</a>
+				<dl class="layui-nav-child">
+					<dd class="layui-this"><a href="">事件管理</a></dd>
+					<dd><a href="">检查抽查</a></dd>
+					<dd><a href="">本级值班</a></dd>
+					<dd><a href="">下级值班</a></dd>
+					<dd><a href="">值班抽查</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">应急保障</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">应急预案</a></dd>
+					<dd><a href="">应急专家</a></dd>
+					<dd><a href="">应急物资</a></dd>
+					<dd><a href="">应急队伍</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">系统服务</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">统计分析</a></dd>
+					<dd><a href="">用户信息</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="layui-tab">
+
+			<!-- 页签头部 -->
+			<ul class="layui-tab-title layui-col-md-offset1 layui-inline" style="width: 80%;">
+				<li class="layui-this tab-head">
+					<h3>待办事项</h3>
+				</li>
+				<li class="tab-head">
+					<h3>历史查询</h3>
+				</li>
+			</ul>
+
+			<!-- 页签主体 -->
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show layui-row">
+					<!-- 时间线主体 -->
+					<ul class="layui-timeline layui-col-md-offset1">
+
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<blockquote class="layui-elem-quote layui-quote-nm layui-bg-gray" style="width: 70%;">
+									<h3 class="layui-timeline-title">
+										<div class="layui-row">
+											<div class="layui-col-md9 layui-row">
+												<div class="layui-col-md3">2019-04-18 11:58</div>
+												<div class="layui-col-md9 title-hover"><span id="xq">朝阳区孙河乡工地内一工人坠亡</span></div>
+											</div>
+										</div>
+									</h3>
+									<p>
+										<div class="layui-row">
+											<div class="layui-textarea layui-col-md10">
+												市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+											</div>
+										</div>
+										<div class="layui-row" style="margin-top: 10px;">
+											<div class="layui-col-md10">
+												<div class="layui-col-md6">
+													情况类别：<span>建筑工程事故</span>
+												</div>
+												<div class="layui-col-md6">
+													事发时间：<span>2019-04-18 10:00</span>
+												</div>
+												<div class="layui-col-md6">
+													事件级别：<span>Ⅲ级（较大）</span>
+												</div>
+												<div class="layui-col-md6">
+													事发地点：<span>朝阳区孙河乡一工地</span>
+												</div>
+											</div>
+										</div>
+									</p>
+								</blockquote>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<blockquote class="layui-elem-quote layui-quote-nm layui-bg-gray" style="width: 70%;">
+									<h3 class="layui-timeline-title">
+										<div class="layui-row">
+											<div class="layui-col-md9 layui-row">
+												<div class="layui-col-md3">2019-04-11 10:21</div>
+												<div class="layui-col-md9 title-hover"><span>北京市海淀区一在建工地发生事故</span></div>
+											</div>
+										</div>
+									</h3>
+									<p>
+										<div class="layui-row">
+											<div class="layui-textarea layui-col-md10">
+												今晨8：20，海淀区清华附中A栋体育馆在建工地，基坑底板钢筋发生倒塌。
+											</div>
+										</div>
+										<div class="layui-row" style="margin-top: 10px;">
+											<div class="layui-col-md10">
+												<div class="layui-col-md6">
+													情况类别：<span>其他建筑工程事故</span>
+												</div>
+												<div class="layui-col-md6">
+													事发时间：<span>2019-04-11 8:20</span>
+												</div>
+												<div class="layui-col-md6">
+													事件级别：<span>待定</span>
+												</div>
+												<div class="layui-col-md6">
+													事发地点：<span>清华附中A栋体育馆</span>
+												</div>
+											</div>
+										</div>
+									</p>
+								</blockquote>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis" id="add">&#xe654;</i>
+							<div class="layui-timeline-content layui-text">
+								<h class="layui-timeline-title" style="font-weight: bolder;">增加</h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 第二页签模块 -->
+				<div class="layui-tab-item layui-col-md-offset1">
+					<div class="layui-row">
+						<!-- 事件历史数据表查询条件 -->
+						<form class="layui-form layui-col-md11" action="">
+							<div class="layui-form-item">
+								<div class="layui-input-inline">
+									<label class="layui-form-label">标题</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" style="width: 150px;" placeholder="请输入标题" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">级别</label>
+									<div class="layui-input-block" style="width: 150px;">
+										<select name="city">
+											<option value=""></option>
+											<option value="0">待定</option>
+											<option value="1">Ⅰ级（特别重大）</option>
+											<option value="2">Ⅱ级（重大）</option>
+											<option value="3">Ⅲ级（较大）</option>
+											<option value="4">Ⅳ级（一般）</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">类别</label>
+									<div class="layui-input-block" style="width: 120px;">
+										<select name="city">
+											<option value=""></option>
+											<option value="0">事故灾难</option>
+											<option value="1">社会安全</option>
+											<option value="2">自然灾害</option>
+											<option value="3">公共卫生</option>
+											<option value="4">其他</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-input-inline">
+									<label class="layui-form-label">时间选择</label>
+									<div class="layui-input-block">
+										<input type="text" style="width: 290px;" class="layui-input" id="time">
+									</div>
+								</div>
+								<div class="layui-input-inline" style="margin-left: 210px;">
+									<button class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<!-- 事件历史数据表 -->
+					<table id="lssj" lay-filter="lssj"></table>
+
+				</div>
+			</div>
+
+			<!-- 事件创建窗口 -->
+			<div id="cjck" style="display: none;padding: 20px;">
+				<div class="layui-col-md12">
+					<div style="float: right;">
+						<div class="layui-btn-container layui-inline">
+							<button class="layui-btn">上报委领导</button>
+							<button class="layui-btn">上报市应急局</button>
+							<button class="layui-btn">转发</button>
+						</div>
+					</div>
+				</div>
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">标题</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">接收人</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" placeholder="请输入接收人" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">接收时间</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请选择接收时间" class="layui-input jsfrom-time" />
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">接收方式</label>
+							<div class="layui-input-block">
+								<select name="city" lay-verify="required" placeholder="请选择接收方式">
+									<option value="">待定</option>
+									<option value="0">市系统对接</option>
+									<option value="1">本系统填报</option>
+									<option value="2">传真</option>
+									<option value="3">电话</option>
+									<option value="3">其他</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">报送单位</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" placeholder="请输入报送单位" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">联系人</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" placeholder="请输入联系人" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">联系电话</label>
+							<div class="layui-input-block">
+								<input type="text" name="title" placeholder="请输入联系电话" class="layui-input" style="width: 215px;">
+							</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">报送时间</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请选择报送时间" class="layui-input jsfrom-time" />
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">情况类别</label>
+							<div class="layui-input-block">
+								<select name="city" lay-verify="required">
+									<option value=""></option>
+									<option value="0">事故灾难</option>
+									<option value="0">社会安全</option>
+									<option value="0">自然灾害</option>
+									<option value="0">公共卫生</option>
+									<option value="0">其他</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<select name="city" lay-verify="required">
+								<option value=""></option>
+								<option value="0">建筑工程事故</option>
+								<option value="0">轨道交通</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">事发时间</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请选择事发时间" class="layui-input jsfrom-time" />
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">事发地点</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请输入事发地点" class="layui-input" />
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">事件级别</label>
+							<div class="layui-input-block">
+								<select name="city" lay-verify="required" placeholder="请选择事件级别">
+									<option value="">待定</option>
+									<option value="0">Ⅰ级（特别重大）</option>
+									<option value="1">Ⅱ级（重大）</option>
+									<option value="2">Ⅲ级（较大）</option>
+									<option value="3">Ⅳ级（一般）</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">工程名称</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请输入工程名称" class="layui-input" />
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">施工单位</label>
+							<div class="layui-input-block">
+								<input type="text" name="time" placeholder="请输入施工单位" class="layui-input" />
+							</div>
+						</div>
+					</div>
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">情况摘要</label>
+						<div class="layui-input-block">
+							<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">发送方式</label>
+						<div class="layui-input-block">
+							<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+							<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+							<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- 事件详情弹窗 -->
+			<div id="xqck" style="display: none;padding: 20px;" class="laui-row">
+				<div class="layui-col-md12">
+					<div style="float: right;">
+						<div class="layui-btn-container layui-inline">
+							<button class="layui-btn">上报委领导</button>
+							<button class="layui-btn">上报市应急局</button>
+							<button class="layui-btn">转发</button>
+						</div>
+						<form class="layui-form layui-inline" action="">
+							<input type="checkbox" name="like1[write]" lay-skin="primary" title="办结归档">
+						</form>
+					</div>
+				</div>
+				<div class="layui-col-md9">
+					<fieldset class="layui-elem-field">
+						<legend>接报情况</legend>
+						<div class="layui-field-box">
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+									<label class="layui-form-label">标题</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" value="朝阳区孙河乡工地内一工人坠亡" autocomplete="off"
+										 class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">接收人</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="应急处" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">接收时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 11:58" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">接收方式</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required" placeholder="请选择接收方式">
+												<option value="">待定</option>
+												<option value="0" selected>市系统对接</option>
+												<option value="1">本系统填报</option>
+												<option value="2">传真</option>
+												<option value="3">电话</option>
+												<option value="3">其他</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">报送单位</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" placeholder="请输入报送单位" value="市应急管理局" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">联系人</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="张三" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">联系电话</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="59958330" class="layui-input" style="width: 215px;">
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">报送时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 11:55" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">情况类别</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required">
+												<option value=""></option>
+												<option value="0" selected>事故灾难</option>
+												<option value="0">社会安全</option>
+												<option value="0">自然灾害</option>
+												<option value="0">公共卫生</option>
+												<option value="0">其他</option>
+											</select>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<select name="city" lay-verify="required">
+											<option value=""></option>
+											<option value="0" selected>建筑工程事故</option>
+											<option value="0">轨道交通</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">事发时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 10:00" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">事发地点</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="朝阳区孙河乡一工地" class="layui-input" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">事件级别</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required">
+												<option value="">待定</option>
+												<option value="0" selected>Ⅰ级（特别重大）</option>
+												<option value="1">Ⅱ级（重大）</option>
+												<option value="2" selected>Ⅲ级（较大）</option>
+												<option value="3">Ⅳ级（一般）</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">工程名称</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" placeholder="请输入工程名称" class="layui-input" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">施工单位</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" placeholder="请输入施工单位" class="layui-input" />
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">情况摘要</label>
+									<div class="layui-input-block">
+										<textarea name="desc" placeholder="请输入内容" class="layui-textarea">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+										</textarea>
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">发送方式</label>
+									<div class="layui-input-block">
+										<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+										<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+										<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+									</div>
+								</div>
+							</form>
+						</div>
+					</fieldset>
+				</div>
+				<div class="layui-col-md3">
+					<fieldset class="layui-elem-field">
+						<legend>办理过程</legend>
+						<div class="layui-field-box" style="height: 512px;overflow: auto;">
+							<div class="layui-bg-gray">
+								<div style="float: left;"><i class="layui-icon">&#xe655;</i></div>
+								<div class="title-hover" style="float: right;"><i class="layui-icon">&#xe605;</i></div>
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-20 17:00 上报•委领导
+									</div>
+									<div class="layui-colla-content layui-show">已接收。主任，2019-04-20 17:03<br>已接收。副主任，2019-04-20 17:03<br>未接收。副主任</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-20 16:00 上报市应急管理局。
+									</div>
+									<div class="layui-colla-content layui-show">已接收。市应急，50505050，2019-04-20 16:03</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-19 16:55 朝阳区建委核报。
+									</div>
+									<div class="layui-colla-content layui-show">已接收。应急处，601010102，2019-04-19 16:58</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-19 11:55 转发朝阳区建委
+									</div>
+									<div class="layui-colla-content layui-show">已接收。赵工，86868686，2019-04-19 11:58</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-18 11:58 接收市应急管理局核报
+									</div>
+									<div class="layui-colla-content layui-show">已接收。应急处，601010102，2019-04-19 11:58</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="layui-col-md12">
+					<fieldset class="layui-elem-field">
+						<legend>相关接报</legend>
+						<div class="layui-field-box" style="min-height: 150px;">
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（上报•市应急管理局 2019-04-20 16:00）</h3>
+								<hr style=" height:2px;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（接收•朝阳区建委 2019-04-19 11:55）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（转发•朝阳区建委 2019-04-19 11:55）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。请贵单位核实情况。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（接收核报•市应急管理局 2019-04-19 11:58）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- layui.js文件引入 -->
+			<script src="../src/layui.js"></script>
+			<script>
+				//引入所需layui模块
+				layui.use(['element', 'jquery', 'layer', 'laydate', 'form', 'upload', 'table'], function() {
+					var element = layui.element,
+						$ = layui.$,
+						layer = layui.layer,
+						form = layui.form,
+						laydate = layui.laydate,
+						table = layui.table,
+						upload = layui.upload;
+
+					// 事件历史数据表数据填充
+					table.render({
+						elem: '#lssj',
+						skin: 'nob',
+						url: './json/table/sj.json',
+						width: 1220,
+						page: {
+							count: 100,
+							limit: 10,
+							limits: [10, 20, 30]
+						},
+						cols: [
+							[{
+									field: 'title',
+									title: '事件标题',
+									event: 'detail',
+									width: 450
+								},
+								{
+									field: 'type',
+									title: '事件类型',
+									align: 'center',
+									width: 150
+								},
+								{
+									field: 'site',
+									title: '事发地点',
+									align: 'center',
+									width: 150
+								},
+								{
+									field: 'time',
+									title: '事发时间',
+									align: 'center',
+									width: 150
+								},
+								{
+									field: 'name',
+									title: '填报人',
+									align: 'center',
+									width: 150
+								},
+								{
+									field: 'state',
+									title: '状态',
+									align: 'center',
+									width: 150
+								}
+							]
+						],
+						done: function(res, curr, count) {
+							element.render();
+						}
+					});
+
+					// 预警历史数据表,预警标题字段监听,点击弹出预警详情窗口
+					table.on('tool(lssj)', function(obj) {
+						var data = obj.data;
+						if (obj.event === 'detail') {
+							layer.open({
+								title: '事件详情',
+								type: 1,
+								content: $("#xqck"),
+								area: '1440px'
+							});
+						}
+					});
+
+					// 文件上传元素初始化
+					var uploadInst = upload.render({
+						elem: '#file',
+						url: '/upload/'
+					});
+
+					// layui时间模块初始化
+					$('.jsfrom-time').each(function() {
+						laydate.render({
+							elem: this,
+							type: 'datetime'
+						});
+					})
+					
+					laydate.render({
+						elem: '#time',
+						type: 'datetime',
+						range: '~'
+					});
+
+
+					// 监听预警接收进度条,点击弹出预警接收进度表
+					$("#jsjd").click(function() {
+						layer.open({
+							title: '接收进度',
+							type: 1,
+							content: $("#jsjdck"),
+							area: '800px'
+						});
+					});
+
+					// 标题详情事件
+					$("#xq").click(function() {
+						layer.open({
+							title: '事件详情',
+							type: 1,
+							content: $("#xqck"),
+							area: '1440px'
+						});
+					});
+
+					// 新增按钮事件
+					$("#add").click(function() {
+						layer.open({
+							title: '添加事件',
+							type: 1,
+							content: $("#cjck"),
+							area: '1000px'
+						});
+					});
+
+					// 删除按钮事件
+					$("#del").click(function() {
+						layer.open({
+							title: '删除预警信息',
+							type: 0,
+							content: '确认删除？',
+							btn: ['确定', '取消']
+						});
+					});
+				});
+			</script>
+	</body>
+</html>

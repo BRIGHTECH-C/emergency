@@ -57,10 +57,48 @@
 						</select>
 					</div>
 				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">发生时间</label>
+					<div class="layui-input-inline" style="width:240px;">
+						<input type="text" class="layui-input" id="test5" placeholder="请选择">
+					</div>
+				</div>
 			</div>
-			
+			</div>
+			</div>
+
+			<div class="layui-form-item">
+				<!-- layui-form-item表单组件，默认占一行 -->
+				<div class="layui-inline">
+					<!-- layui-inline表示行内元素不单独占一行 -->
+					<label class="layui-form-label">发布类型</label>
+					<div class="layui-input-block" style="width:235px;">
+						<select name="interest" lay-filter="aihao">
+							<option value="">请选择</option>
+							<option value="0">首发</option>
+							<option value="1">更新</option>
+							<option value="2">解除</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">发布范围</label>
+					<div class="layui-input-block">
+						<input type="text" style="width:240px; name=" title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+						 class="layui-input">
+					</div>
+				</div>
+			</div>
+
 			<div class="layui-form-item layui-form-text">
 				<label class="layui-form-label">预警内容</label>
+				<div class="layui-input-block" style="width:600px;">
+					<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+				</div>
+			</div>
+
+			<div class="layui-form-item layui-form-text">
+				<label class="layui-form-label">应对措施</label>
 				<div class="layui-input-block" style="width:600px;">
 					<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
 				</div>
@@ -85,10 +123,9 @@
 			</div>
 
 			<div class="layui-upload"><br><br><br>
-				<div class="layui-inline" style="padding-left:200px;">
-					<button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>上传文件</button>
-					<button class="layui-btn">发布</button>
-					<button class="layui-btn">取消</button>
+				<div class="layui-inline" style="padding-left:310px;">
+					<button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>附件</button>
+					<button class="layui-btn" lay-submit lay-filter="formDemo">发布</button>
 				</div>
 			</div>
 
