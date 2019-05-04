@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>北京市建筑工程事故值守应急系统</title>
+		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
+
+		<style>
+
+		</style>
+	</head> 
+
+
+
+	<body style="background-color: #F2F2F2;" onload="duiqi()">
+
+		<div style="height: 4rem;background-color: #FFFFFF;margin-bottom: 12px;">
+			<div class="layui-main" style="background-color: #FFFFFF;">
+				<ul class="layui-nav" style="background-color: #FFFFFF;">
+					<img src="../img/common/log.png" style="width: 3rem;height: 3rem;" />
+					<li class="layui-nav-item">
+						<a href="" style="color: black;font-size: 1.1rem;">首页</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="" style="color: black;font-size: 1.1rem;">预警发布</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="" style="color: black;font-size: 1.1rem;">通讯录</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="" style="color: black;font-size: 1.1rem;">通知公告</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" style="color: black;font-size: 1.1rem;">值班值守</a>
+						<dl class="layui-nav-child">
+							<dd><a href="" style="color: black;font-size: 1.1rem;">事件管理</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">检查抽查</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">本级值班</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">下级值班</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">值班抽查</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" style="color: black;font-size: 1.1rem;">应急保障</a>
+						<dl class="layui-nav-child">
+							<dd><a href="" style="color: black;font-size: 1.1rem;">应急预案</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">应急专家</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">应急物资</a></dd>
+							<dd><a href="" style="color: black;font-size: 1.1rem;">救援队伍</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="" style="color: black;font-size: 1.1rem;">系统服务</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div id="" style="width: 1024px;margin: 0 auto;">
+			<div id="home_left" style="width: 700px;hebackground-color: #FFFFFF;float: left;">
+				<fieldset class="layui-elem-field layui-field-title" style="margin-top: 0px;">
+					<legend style="font-size: 1rem;">
+						预警信息<span style="color: red;"><strong> （4）</strong></span>
+					</legend>
+				</fieldset>
+				<div class="layui-collapse" lay-filter="test" style="margin-top: 2px;">
+					<div class="layui-colla-item" id="yujing-item-1">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-23 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(首发）市气象局发布森林火险黄色预警
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md4" style="vertical-align: middle;">
+										<span class="layui-badge-dot layui-bg-black"></span>
+										&nbsp;森林火险
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon" style="background-color: #FFFF00;">&#xe665;</i> &nbsp;3级
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon">&#xe715;</i> &nbsp;市气象局
+									</div>
+								</div>
+								<div class="layui-row" style="vertical-align: middle;margin-top: 8px;">
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="fabu()"><i class="layui-icon">&#xe642;</i> &nbsp;发布</a>
+									</div>
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="delYujing()"><i class="layui-icon">&#x1007;</i> &nbsp;删除</a>
+									</div>
+									<div class="layui-col-md8">
+
+									</div>
+
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+	市气象台4月23日14时30分发布森林火险黄色预警，预计未来24小时，火险气象等级为3级，请注意做好防火工作。</pre>
+							</div>
+						</div>
+					</div>
+					
+					<div class="layui-colla-item" id="yujing-item-2">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-22 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(解除）市气象局解除大风黄色预警
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md4" style="vertical-align: middle;">
+										<span class="layui-badge-dot layui-bg-black"></span>
+										&nbsp;大风
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon" style="background-color: #FFFF00;">&#xe665;</i> &nbsp;3级
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon">&#xe715;</i> &nbsp;市气象局
+									</div>
+								</div>
+								<div class="layui-row" style="vertical-align: middle;margin-top: 8px;">
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="jiechu()"><i class="layui-icon">&#xe642;</i> &nbsp;解除</a>
+									</div>
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="delYujing()"><i class="layui-icon">&#x1007;</i> &nbsp;删除</a>
+									</div>
+									<div class="layui-col-md8">
+
+									</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+	市气象台2019年4月22日14时30分解除4月21日14时30分发布的大风黄色预警信号。</pre>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+					<div class="layui-colla-item" id="yujing-item-3">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-21 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(更新）市气象局将大风蓝色预警升级为大风黄色预警
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md4" style="vertical-align: middle;">
+										<span class="layui-badge-dot layui-bg-black"></span>
+										&nbsp;大风
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon" style="background-color: #FFFF00;">&#xe665;</i> &nbsp;3级
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon">&#xe715;</i> &nbsp;市气象局
+									</div>
+								</div>
+								<div class="layui-row" style="vertical-align: middle;margin-top: 8px;">
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="faBu3()"><i class="layui-icon">&#xe642;</i> &nbsp;更新发布</a>
+									</div>
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="delYujing()"><i class="layui-icon">&#x1007;</i> &nbsp;删除</a>
+									</div>
+									<div class="layui-col-md8">
+
+									</div>
+
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+	市气象台2019年4月21日14时30分将4月20日14时30分发布的大风蓝色预警信号升级为大风黄色预警：预计未来24小时全市将受大风影响，平均风力可达8级或阵风9级以上，请注意防范。</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item" id="yujing-item-4">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-20 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(首发）市气象局发布大风蓝色预警
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md4" style="vertical-align: middle;">
+										<span class="layui-badge-dot layui-bg-black"></span>
+										&nbsp;大风
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon layui-bg-blue">&#xe665;</i> &nbsp;4级
+									</div>
+									<div class="layui-col-md4">
+										<i class="layui-icon">&#xe715;</i> &nbsp;市气象局
+									</div>
+								</div>
+								<div class="layui-row" style="vertical-align: middle;margin-top: 8px;">
+									<div class="layui-col-md2">
+										<a href="javascript:void();" onclick="jiechu()"><i class="layui-icon">&#xe642;</i> &nbsp;解除</a>
+									</div>
+									<div class="layui-col-md2">
+										&nbsp;
+									</div>
+									<div class="layui-col-md8">
+										<div class="layui-progress layui-progress-big" lay-showpercent="true">
+											<div class="layui-progress-bar" lay-percent="15/23"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+	市气象台2019年4月20日14时30分发布大风蓝色预警信号，预计未来24小时全市将受大风影响，平均风力可达6级或阵风7级以上，请注意防范。</pre>
+							</div>
+						</div>
+					</div>
+
+
+
+				<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					<legend style="font-size: 1rem;">
+						事件信息<span style="color: red;"><strong> （4）</strong></span>
+					</legend>
+				</fieldset>
+				<div class="layui-collapse" lay-filter="test" style="margin: 2px;">
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-25 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;东城区某工地发生安全事故
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+
+								<div class="layui-row" style="margin-top: 2px;">
+									<div class="layui-col-md6">
+										来自&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;市应急管理局的&nbsp;<span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;核报
+									</div>
+									<div class="layui-col-md6">
+										已接收&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;张工，010-59958300
+									</div>
+								</div>				
+								
+							</div>
+							<div id="" style="margin-top: 8px;margin-bottom: 5px;">
+								<pre>
+  市公安局报，中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+								</pre>
+							</div>
+							<div class="layui-row" style="margin-top: 2px;">
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
+								</div>
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="banli()"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+								</div>
+								<div class="layui-col-md6">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-25 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;海淀区发生一起道路施工事故
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+
+								<div class="layui-row" style="margin-top: 2px;">
+									<div class="layui-col-md6">
+										来自&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;市应急管理局的&nbsp;<span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;关注
+									</div>
+									<div class="layui-col-md6">
+										已接收&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;张工，2019-04-25 14:31
+									</div>
+								</div>				
+								
+							</div>
+							<div id="" style="margin-top: 8px;margin-bottom: 5px;">
+								<pre>
+  市公安局报，海淀区发生一起道路施工事故。
+								</pre>
+							</div>
+							<div class="layui-row" style="margin-top: 2px;">
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
+								</div>
+								<div class="layui-col-md3">
+									<a href="javascript:void();" id="xq"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+								</div>
+								<div class="layui-col-md6">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-24 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西城区某工地发生安全事故
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+
+								<div class="layui-row" style="margin-top: 2px;">
+									<div class="layui-col-md6">
+										来自&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;西城区建委的&nbsp;<span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;上报
+									</div>
+									<div class="layui-col-md6">
+										已接收&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;张工，010-59958300
+									</div>
+								</div>				
+							</div>
+							<div id="" style="margin-top: 8px;margin-bottom: 5px;">
+								<pre>
+  市公安局报，中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+								</pre>
+							</div>
+							<div class="layui-row" style="margin-top: 2px;">
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
+								</div>
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="banli()"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+								</div>
+								<div class="layui-col-md6">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-23 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朝阳区孙河乡工地内一工人坠亡
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+
+								<div class="layui-row" style="margin-top: 2px;">
+									<div class="layui-col-md6">
+										上报至&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;委领导
+									</div>
+									<div class="layui-col-md6">
+										对方已接收&nbsp;<span class="layui-badge-dot layui-bg-green"></span>&nbsp;徐主任，2019-04-23 14：32
+									</div>
+								</div>				
+							</div>
+							<div id="" style="margin-top: 8px;margin-bottom: 5px;">
+								<pre>
+  市公安局报，中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+  事件具体经过。。。
+  事件处置结果。。。
+								</pre>
+							</div>
+							<div class="layui-row" style="margin-top: 2px;">
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
+								</div>
+								<div class="layui-col-md3">
+									<a href="javascript:void();" onclick="banli()"><i class="layui-icon" id="xq">&#xe642;</i> &nbsp;<u>办理</u></a>
+								</div>
+								<div class="layui-col-md6">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					<legend style="font-size: 1rem;">
+						通知公告<span style="color: red;"><strong> （5）</strong></span>
+					</legend>
+				</fieldset>
+				<div class="layui-collapse" lay-filter="test" style="margin: 2px;">
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-25 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(会议）关于召开全委视频会议通知
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md12" style="vertical-align: middle;">
+											<div class="layui-progress layui-progress-big" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="15/23"></div>
+											</div>									
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+				关于召开全委视频会议通知
+	请各单位于2019年4月30日上午10点参加全委视频会议。。。。。。。。。。。。。。。。。。。
+	会议主题。。。
+	参会领导。。。
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-24 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(通知）关于加强事故防范工作的通知
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md12" style="vertical-align: middle;">
+											<div class="layui-progress layui-progress-big" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="15/23"></div>
+											</div>									
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+				关于加强事故防范工作的通知
+	请各单位于2019年4月30日上午10点参加全委视频会议。。。。。。。。。。。。。。。。。。。
+	会议主题。。。
+	参会领导。。。
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-22 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(会议）关于召开全委视频会议通知
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md12" style="vertical-align: middle;">
+											<div class="layui-progress layui-progress-big" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="15/23"></div>
+											</div>									
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+				关于召开全委视频会议通知
+	请各单位于2019年4月30日上午10点参加全委视频会议。。。。。。。。。。。。。。。。。。。
+	会议主题。。。
+	参会领导。。。
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-21 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(通知）关于加强事故防范工作的通知
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md12" style="vertical-align: middle;">
+											<div class="layui-progress layui-progress-big" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="15/23"></div>
+											</div>									
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+				关于加强事故防范工作的通知
+	请各单位于2019年4月30日上午10点参加全委视频会议。。。。。。。。。。。。。。。。。。。
+	会议主题。。。
+	参会领导。。。
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title" style="background: #FBFBFB;border-color:#F0F0F0;">
+							2019-04-20 14:30
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(通知）关于加强事故防范工作的通知
+
+						</h2>
+						<div class="layui-colla-content" style="background-color: #FFFFFF;">
+							<div class="layui-fluid">
+								<div class="layui-row" style="vertical-align: middle;">
+									<div class="layui-col-md12" style="vertical-align: middle;">
+											<div class="layui-progress layui-progress-big" lay-showpercent="true">
+												<div class="layui-progress-bar" lay-percent="15/23"></div>
+											</div>									
+									</div>
+								</div>
+							</div>
+							<div id="" style="margin-top: 0.625rem;">
+								<pre>
+				关于加强事故防范工作的通知
+	请各单位于2019年4月30日上午10点参加全委视频会议。。。。。。。。。。。。。。。。。。。
+	会议主题。。。
+	参会领导。。。
+								</pre>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+
+
+			</div>
+			</div>
+
+
+			<div id="home_right" style="width: 312px;background-color: #FFFFFF;float: right;" onclick="shuju()">
+				<div id="" style="margin-top: 10px;">
+					<div id="">
+						<fieldset class="layui-elem-field">
+							<legend style="font-size: 1rem;">项目施工单位</legend>
+							<div class="layui-field-box">
+								<table border="0" cellspacing="" cellpadding="" width="100%">
+									<tr>
+										<td width="30%" align="right">
+											总数：
+										</td>
+										<td width="70%" align="left">
+											3982
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											已注册：
+										</td>
+										<td width="70%" align="left">
+											2000
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											未注册：
+										</td>
+										<td width="70%" align="left">
+											1982
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											3月未登录：
+										</td>
+										<td width="70%" align="left">
+											500
+										</td>
+									</tr>
+								</table>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<div id="" style="margin-top: 10px;">
+					<div id="">
+						<fieldset class="layui-elem-field">
+							<legend style="font-size: 1rem;">系统用户</legend>
+							<div class="layui-field-box">
+								<table border="0" cellspacing="" cellpadding="" width="100%">
+									<tr>
+										<td width="30%" align="right">
+											总数：
+										</td>
+										<td width="70%" align="left">
+											20000
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											未注册：
+										</td>
+										<td width="70%" align="left">
+											1000
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											已注册：
+										</td>
+										<td width="70%" align="left">
+											19000
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align="right">
+											3月未登录：
+										</td>
+										<td width="70%" align="left">
+											2000
+										</td>
+									</tr>
+								</table>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<div id="" style="margin-top: 10px;">
+					<div id="">
+						<fieldset class="layui-elem-field">
+							<legend style="font-size: 1rem;">二级单位</legend>
+							<div class="layui-field-box">
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;东城区建委1个月未登录</p>
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;西城区建委1个月未登录</p>
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;西城区房管局1个月未登录</p>
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;亦庄房管局1个月未登录</p>
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;北京建工集团1个月未登录</p>
+								<p style="margin-top: 0.5rem;"><span class="layui-badge-dot"></span>&nbsp;河南省建管处1个月未登录</p>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div style="margin-top: 240px;">
+					&nbsp;
+				</div>
+
+
+			</div>
+		</div>
+
+		<div id="xqck" style="display: none;padding: 20px;" class="laui-row">
+				<div class="layui-col-md12">
+					<div style="float: right;">
+						<div class="layui-btn-container layui-inline">
+							<button class="layui-btn">上报委领导</button>
+							<button class="layui-btn">上报市应急局</button>
+							<button class="layui-btn" id="zf">转发</button>
+						</div>
+						<form class="layui-form layui-inline" action="">
+							<input type="checkbox" name="like1[write]" lay-skin="primary" title="办结归档">
+						</form>
+					</div>
+				</div>
+				<div class="layui-col-md9">
+					<fieldset class="layui-elem-field">
+						<legend>接报情况</legend>
+						<div class="layui-field-box">
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+									<label class="layui-form-label">标题</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" value="朝阳区孙河乡工地内一工人坠亡" autocomplete="off"
+										 class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">接收人</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="应急处" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">接收时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 11:58" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">接收方式</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required" placeholder="请选择接收方式">
+												<option value="">待定</option>
+												<option value="0" selected>市系统对接</option>
+												<option value="1">本系统填报</option>
+												<option value="2">传真</option>
+												<option value="3">电话</option>
+												<option value="3">其他</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">报送单位</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" placeholder="请输入报送单位" value="市应急管理局" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">联系人</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="张三" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">联系电话</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" value="59958330" class="layui-input" style="width: 215px;">
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">报送时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 11:55" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">情况类别</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required">
+												<option value=""></option>
+												<option value="0" selected>事故灾难</option>
+												<option value="0">社会安全</option>
+												<option value="0">自然灾害</option>
+												<option value="0">公共卫生</option>
+												<option value="0">其他</option>
+											</select>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<select name="city" lay-verify="required">
+											<option value=""></option>
+											<option value="0" selected>建筑工程事故</option>
+											<option value="0">轨道交通</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">事发时间</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="2019-04-18 10:00" class="layui-input jsfrom-time" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">事发地点</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" value="朝阳区孙河乡一工地" class="layui-input" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">事件级别</label>
+										<div class="layui-input-block">
+											<select name="city" lay-verify="required">
+												<option value="">待定</option>
+												<option value="0" selected>Ⅰ级（特别重大）</option>
+												<option value="1">Ⅱ级（重大）</option>
+												<option value="2" selected>Ⅲ级（较大）</option>
+												<option value="3">Ⅳ级（一般）</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">工程名称</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" placeholder="请输入工程名称" class="layui-input" />
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">施工单位</label>
+										<div class="layui-input-block">
+											<input type="text" name="time" placeholder="请输入施工单位" class="layui-input" />
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">情况摘要</label>
+									<div class="layui-input-block">
+										<textarea name="desc" placeholder="请输入内容" class="layui-textarea">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+										</textarea>
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">发送方式</label>
+									<div class="layui-input-block">
+										<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+										<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+										<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+									</div>
+								</div>
+							</form>
+						</div>
+					</fieldset>
+				</div>
+				<div class="layui-col-md3">
+					<fieldset class="layui-elem-field">
+						<legend>办理过程</legend>
+						<div class="layui-field-box" style="height: 512px;overflow: auto;">
+							<div class="layui-bg-gray">
+								<div style="float: left;"><i class="layui-icon">&#xe655;</i></div>
+								<div class="title-hover" style="float: right;"><i class="layui-icon">&#xe605;</i></div>
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-20 17:00 上报•委领导
+									</div>
+									<div class="layui-colla-content">已接收。主任，2019-04-20 17:03<br>已接收。副主任，2019-04-20 17:03<br>未接收。副主任</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-20 16:00 上报市应急管理局。
+									</div>
+									<div class="layui-colla-content">已接收。市应急，50505050，2019-04-20 16:03</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-19 16:55 朝阳区建委核报。
+									</div>
+									<div class="layui-colla-content">已接收。应急处，601010102，2019-04-19 16:58</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-19 11:55 转发朝阳区建委
+									</div>
+									<div class="layui-colla-content">已接收。赵工，86868686，2019-04-19 11:58</div>
+								</div>
+							</div>
+							<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+								<div class="layui-colla-item">
+									<div class="layui-colla-title">
+										2019-04-18 11:58 接收市应急管理局核报
+									</div>
+									<div class="layui-colla-content">已接收。应急处，601010102，2019-04-19 11:58</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="layui-col-md12">
+					<fieldset class="layui-elem-field">
+						<legend>相关接报</legend>
+						<div class="layui-field-box" style="min-height: 150px;">
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（上报•委领导 2019-04-20 17:00）</h3>
+								<hr style=" height:2px;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（上报•市应急管理局 2019-04-20 16:00）</h3>
+								<hr style=" height:2px;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（接收•朝阳区建委 2019-04-19 11:55）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（转发•朝阳区建委 2019-04-19 11:55）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。请贵单位核实情况。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>朝阳区孙河乡工地内一工人坠亡（接收核报•市应急管理局 2019-04-19 11:58）</h3>
+								<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+								<table width="100%">
+									<tr>
+										<td>
+											情况类别：<span>事故灾难---建筑工程事故</span>
+										</td>
+										<td>
+											事发时间：<span>2019-04-18 10:00</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											事件级别：<span>Ⅲ级（较大）</span>
+										</td>
+										<td>
+											事发地点：<span>朝阳区孙河乡一工地</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan=2>
+											情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。</div>
+										</td>
+									</tr>
+								</table>
+							</blockquote>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+
+
+	</body>
+	<script src="../layui/layui.all.js" charset="utf-8"></script>
+	<script>
+		// var home_left = document.getElementById("home_left");
+		// var home_right = document.getElementById("home_right");
+		// home_right.style.height = home_left.offsetHeight;
+		// home_right.offsetHeight = home_left.offsetHeight;
+		//alert(home_left.offsetHeight);
+		//alert(home_right.offsetHeight);
+
+
+
+		function fabu() {
+			layer.open({
+				type: 2,
+				title: '预警信息发布',
+				shadeClose: true,
+				shade: 0.8,
+				area: ['900px', '90%'],
+				content: 'home-yujing.html' //iframe的url
+			});
+		}
+
+		function faBu3() {
+			layer.open({
+				type: 2,
+				title: '预警信息发布',
+				shadeClose: true,
+				shade: 0.8,
+				area: ['900px', '90%'],
+				content: 'home-yujing2.html' //iframe的url
+			});
+		}		
+			
+		function delYujing(){
+				layer.open({
+					title: '删除预警信息',
+					type: 0,
+					content: '确认删除？',
+					btn: ['确定', '取消']
+				});
+		}
+		
+		function jiechu(){
+				layer.open({
+					title: '解除预警信息',
+					type: 0,
+					content: '确认解除？',
+					btn: ['确定', '取消']
+				});
+		}
+
+
+		
+		function chundang2(){
+			      layer.msg('<pre style="text-align: left;"><br><br>将此事件办结存档，此事件将不再出现在待办事项中。<br>您可以从[事件信息查询]中找到此事件，并重新解除办结存档的状态。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br></pre>', {
+        time: 0, //20s后自动关闭
+        btn: ['确认', '取消']
+      });
+		}
+
+		function chundang(){
+					layer.open({
+						title: '事件存档',
+						type: 0,
+						content: '确认存档？',
+						btn: ['确定', '取消']
+					});
+					}
+
+					// 标题详情事件
+					$("#xq").click(function() {
+						layer.open({
+							title: '事件详情',
+							type: 1,
+							content: $("#xqck"),
+							area: '1440px'
+						});
+					});
+
+
+		function banli() {
+			layer.open({
+				type: 2,
+				title: '突发事件',
+				shadeClose: true,
+				shade: 0.8,
+				area: ['1024px', '90%'],
+				content: 'home-banli.html' //iframe的url
+			});
+		}						
+		
+		function shuju(){
+				layer.open({
+					title: '系统用户异常提醒机制',
+					type: 0,
+					content: '是否对异常用户进行手机短信提醒？',
+					btn: ['确定', '取消']
+				});			}
+
+	</script>
+</html>
