@@ -340,21 +340,21 @@
 			<div id="yjxqck" style="display: none;padding: 20px;">
 				<div class="layui-container" style="width: 780px;">
 					<div class="layui-row" style="margin-bottom: 5px;">
-						<div class="layui-col-md12">标题：市气象台2017年09月27日14时17分发布大雾蓝色预警信号</div>
+						<div class="layui-col-md12">标题：市气象台2019年03月01日20时22分发布大风红色预警信号</div>
 					</div>
 					<div class="layui-row" style="margin-bottom: 5px;">
-						<div class="layui-col-md6">级别：4级</div>
-						<div class="layui-col-md6">类别：恶劣天气</div>
+						<div class="layui-col-md6">级别：1级</div>
+						<div class="layui-col-md6">类别：大风</div>
 					</div>
 					<div class="layui-row" style="margin-bottom: 5px;">
 						<div class="layui-col-md6">信息来源：市气象局</div>
-						<div class="layui-col-md6">发布时间：2017-09-27 14:17:00</div>
+						<div class="layui-col-md6">发布时间：2019-03-01 20:22</div>
 					</div>
 					<div class="layui-row" style="margin-bottom: 5px;">
 						<div class="layui-col-md12">
 							<div style="margin-bottom: 5px;">预警内容：</div>
 							<div class="layui-textarea" style="width: 700px;">
-								市气象台2018年10月25日16时30分发布大风蓝色预警信号，受冷空气影响，预计25日夜间到26日，
+								市气象台2019年03月01日20时22分发布大风红色预警信号，受冷空气影响，预计01日夜间到02日，
 								本市将有4、5级偏北风，阵风可达7级左右。
 							</div>
 						</div>
@@ -1132,7 +1132,7 @@
 						elem: '#lssj',
 						skin: 'nob',
 						url: './json/table/yj.json',
-						width: 1200,
+						width: 1160,
 						page: {
 							count: 100,
 							limit: 10,
@@ -1156,9 +1156,10 @@
 												break;
 										}
 										return "<div style='background-color: " + color +
-											";width: 70px;height: 10px;margin-top: 5px;'> </div>"
+											";width: 40px;height: 10px;margin-top: 5px;'> </div>"
 									},
-									width: 100
+									width: 60,
+									align: "center"
 								},
 								{
 									field: 'title',
@@ -1247,7 +1248,7 @@
 							layer.open({
 								title: '发送对象',
 								type: 2,
-								content: './dtree2.html',
+								content: './dtree.html',
 								area: ['300px','400px']
 							});
 						}

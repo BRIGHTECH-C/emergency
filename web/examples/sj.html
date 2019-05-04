@@ -361,8 +361,8 @@
 							<button class="layui-btn">上报市应急局</button>
 							<button class="layui-btn" id="zf">转发</button>
 						</div>
-						<form class="layui-form layui-inline" action="">
-							<input type="checkbox" name="like1[write]" lay-skin="primary" title="办结归档">
+						<form class="layui-form layui-inline" action="" lay-filter="gdf">
+							<input type="checkbox" name="gd" lay-skin="primary" title="办结归档">
 						</form>
 					</div>
 				</div>
@@ -726,7 +726,7 @@
 						elem: '#lssj',
 						skin: 'nob',
 						url: './json/table/sj.json',
-						width: 1060,
+						width: 950,
 						page: {
 							count: 100,
 							limit: 10,
@@ -756,12 +756,6 @@
 									title: '事发时间',
 									align: 'center',
 									width: 150
-								},
-								{
-									field: 'name',
-									title: '接收人',
-									align: 'center',
-									width: 150
 								}
 							]
 						],
@@ -770,15 +764,23 @@
 						}
 					});
 
-					// 预警历史数据表,预警标题字段监听,点击弹出预警详情窗口
+					// 事件历史数据表,事件标题字段监听,点击弹出事件详情窗口
 					table.on('tool(lssj)', function(obj) {
 						var data = obj.data;
 						if (obj.event === 'detail') {
+							form.val("gdf", {
+							  "gd": true
+							});
 							layer.open({
 								title: '事件详情',
 								type: 1,
 								content: $("#xqck"),
-								area: '1440px'
+								area: '1440px',
+								end: function(){
+									form.val("gdf", {
+									  "gd": false
+									});
+								}
 							});
 						}
 					});
@@ -829,7 +831,7 @@
 						layer.open({
 							title: '转发对象',
 							type: 2,
-							content: './dtree.html',
+							content: './dtree2.html',
 							area: ['300px','400px']
 						});
 					});
