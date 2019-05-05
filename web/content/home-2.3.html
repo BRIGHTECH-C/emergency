@@ -5,9 +5,6 @@
 		<title>北京市建筑工程事故值守应急系统</title>
 		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
 
-		<style>
-
-		</style>
 	</head> 
 
 
@@ -220,7 +217,7 @@
 									<div class="layui-col-md2">
 										&nbsp;
 									</div>
-									<div class="layui-col-md8">
+									<div class="layui-col-md8 jd">
 										<div class="layui-progress layui-progress-big" lay-showpercent="true">
 											<div class="layui-progress-bar" lay-percent="15/23"></div>
 										</div>
@@ -271,7 +268,7 @@
 									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
 								</div>
 								<div class="layui-col-md3">
-									<a href="javascript:void();" onclick="banli()"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+									<a href="javascript:void();" class="xq"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
 								</div>
 								<div class="layui-col-md6">
 									&nbsp;
@@ -309,7 +306,7 @@
 									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
 								</div>
 								<div class="layui-col-md3">
-									<a href="javascript:void();" id="xq"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+									<a href="javascript:void();"  class="xq"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
 								</div>
 								<div class="layui-col-md6">
 									&nbsp;
@@ -347,7 +344,7 @@
 									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
 								</div>
 								<div class="layui-col-md3">
-									<a href="javascript:void();" onclick="banli()"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
+									<a href="javascript:void();"  class="xq"><i class="layui-icon">&#xe642;</i> &nbsp;<u>办理</u></a>
 								</div>
 								<div class="layui-col-md6">
 									&nbsp;
@@ -386,7 +383,7 @@
 									<a href="javascript:void();" onclick="chundang()"><i class="layui-icon">&#xe679;</i> &nbsp;<u>存档办结</u></a>
 								</div>
 								<div class="layui-col-md3">
-									<a href="javascript:void();" onclick="banli()"><i class="layui-icon" id="xq">&#xe642;</i> &nbsp;<u>办理</u></a>
+									<a href="javascript:void();"  class="xq"><i class="layui-icon" id="xq">&#xe642;</i> &nbsp;<u>办理</u></a>
 								</div>
 								<div class="layui-col-md6">
 									&nbsp;
@@ -414,7 +411,7 @@
 						<div class="layui-colla-content" style="background-color: #FFFFFF;">
 							<div class="layui-fluid">
 								<div class="layui-row" style="vertical-align: middle;">
-									<div class="layui-col-md12" style="vertical-align: middle;">
+									<div class="layui-col-md12 jd" style="vertical-align: middle;">
 											<div class="layui-progress layui-progress-big" lay-showpercent="true">
 												<div class="layui-progress-bar" lay-percent="15/23"></div>
 											</div>									
@@ -441,7 +438,7 @@
 						<div class="layui-colla-content" style="background-color: #FFFFFF;">
 							<div class="layui-fluid">
 								<div class="layui-row" style="vertical-align: middle;">
-									<div class="layui-col-md12" style="vertical-align: middle;">
+									<div class="layui-col-md12 jd" style="vertical-align: middle;">
 											<div class="layui-progress layui-progress-big" lay-showpercent="true">
 												<div class="layui-progress-bar" lay-percent="15/23"></div>
 											</div>									
@@ -468,7 +465,7 @@
 						<div class="layui-colla-content" style="background-color: #FFFFFF;">
 							<div class="layui-fluid">
 								<div class="layui-row" style="vertical-align: middle;">
-									<div class="layui-col-md12" style="vertical-align: middle;">
+									<div class="layui-col-md12 jd" style="vertical-align: middle;">
 											<div class="layui-progress layui-progress-big" lay-showpercent="true">
 												<div class="layui-progress-bar" lay-percent="15/23"></div>
 											</div>									
@@ -495,7 +492,7 @@
 						<div class="layui-colla-content" style="background-color: #FFFFFF;">
 							<div class="layui-fluid">
 								<div class="layui-row" style="vertical-align: middle;">
-									<div class="layui-col-md12" style="vertical-align: middle;">
+									<div class="layui-col-md12 jd" style="vertical-align: middle;">
 											<div class="layui-progress layui-progress-big" lay-showpercent="true">
 												<div class="layui-progress-bar" lay-percent="15/23"></div>
 											</div>									
@@ -522,7 +519,7 @@
 						<div class="layui-colla-content" style="background-color: #FFFFFF;">
 							<div class="layui-fluid">
 								<div class="layui-row" style="vertical-align: middle;">
-									<div class="layui-col-md12" style="vertical-align: middle;">
+									<div class="layui-col-md12 jd" style="vertical-align: middle;">
 											<div class="layui-progress layui-progress-big" lay-showpercent="true">
 												<div class="layui-progress-bar" lay-percent="15/23"></div>
 											</div>									
@@ -1305,7 +1302,368 @@
 					</div>
 				</form>
 			</div>
-			
+			<!-- 事件详情弹窗 -->
+			<div id="xqck" style="display: none;padding: 20px;" class="laui-row">
+							<div class="layui-col-md12">
+								<div style="float: right;">
+									<div class="layui-btn-container layui-inline">
+										<button class="layui-btn">上报委领导</button>
+										<button class="layui-btn">上报市应急局</button>
+										<button class="layui-btn" id="zf">转发</button>
+									</div>
+									<form class="layui-form layui-inline" action="" lay-filter="gdf">
+										<input type="checkbox" name="gd" lay-skin="primary" title="办结归档">
+									</form>
+								</div>
+							</div>
+							<div class="layui-col-md9">
+								<fieldset class="layui-elem-field">
+									<legend>接报情况</legend>
+									<div class="layui-field-box">
+										<form class="layui-form" action="">
+											<div class="layui-form-item">
+												<label class="layui-form-label">标题</label>
+												<div class="layui-input-block">
+													<input type="text" name="title" required lay-verify="required" value="朝阳区孙河乡工地内一工人坠亡" autocomplete="off"
+													 class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-inline">
+													<label class="layui-form-label">接收人</label>
+													<div class="layui-input-block">
+														<input type="text" name="title" value="张工" class="layui-input">
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">接收时间</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" value="2019-04-25 14:31" class="layui-input jsfrom-time" />
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">接收方式</label>
+													<div class="layui-input-block">
+														<select name="city" lay-verify="required" placeholder="请选择接收方式">
+															<option value="">待定</option>
+															<option value="0" selected>市系统对接</option>
+															<option value="1">本系统填报</option>
+															<option value="2">传真</option>
+															<option value="3">电话</option>
+															<option value="3">其他</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-inline">
+													<label class="layui-form-label">报送单位</label>
+													<div class="layui-input-block">
+														<input type="text" name="title" placeholder="请输入报送单位" value="市应急管理局" class="layui-input">
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">联系人</label>
+													<div class="layui-input-block">
+														<input type="text" name="title" value="李工" class="layui-input">
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">联系电话</label>
+													<div class="layui-input-block">
+														<input type="text" name="title" value="010-50505050" class="layui-input" style="width: 215px;">
+													</div>
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-inline">
+													<label class="layui-form-label">报送时间</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" value="2019-04-23 14:30" class="layui-input jsfrom-time" />
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">情况类别</label>
+													<div class="layui-input-block">
+														<select name="city" lay-verify="required">
+															<option value=""></option>
+															<option value="0" selected>事故灾难</option>
+															<option value="0">社会安全</option>
+															<option value="0">自然灾害</option>
+															<option value="0">公共卫生</option>
+															<option value="0">其他</option>
+														</select>
+													</div>
+												</div>
+												<div class="layui-inline">
+													<select name="city" lay-verify="required">
+														<option value=""></option>
+														<option value="0" selected>建筑工程事故</option>
+														<option value="0">轨道交通</option>
+													</select>
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-inline">
+													<label class="layui-form-label">事发时间</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" value="2019-04-23 10:00" class="layui-input jsfrom-time" />
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">事发地点</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" value="朝阳区孙河乡一工地" class="layui-input" />
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">事件级别</label>
+													<div class="layui-input-block">
+														<select name="city" lay-verify="required">
+															<option value="">待定</option>
+															<option value="0" selected>Ⅰ级（特别重大）</option>
+															<option value="1">Ⅱ级（重大）</option>
+															<option value="2" selected>Ⅲ级（较大）</option>
+															<option value="3">Ⅳ级（一般）</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-inline">
+													<label class="layui-form-label">工程名称</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" placeholder="请输入工程名称" class="layui-input" />
+													</div>
+												</div>
+												<div class="layui-inline">
+													<label class="layui-form-label">施工单位</label>
+													<div class="layui-input-block">
+														<input type="text" name="time" placeholder="请输入施工单位" class="layui-input" />
+													</div>
+												</div>
+											</div>
+											<div class="layui-form-item layui-form-text">
+												<label class="layui-form-label">情况摘要</label>
+												<div class="layui-input-block">
+													<textarea name="desc" placeholder="请输入内容" class="layui-textarea">市公安局报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+			事件具体经过。。。
+			事件处置结果。。
+													</textarea>
+												</div>
+											</div>
+											<div class="layui-form-item layui-form-text">
+												<label class="layui-form-label">发送方式</label>
+												<div class="layui-input-block">
+													<input type="checkbox" name="like1[write]" lay-skin="primary" title="PC端" checked="checked">
+													<input type="checkbox" name="like1[read]" lay-skin="primary" title="APP端" checked="checked">
+													<input type="checkbox" name="like1[game]" lay-skin="primary" title="短信" checked="checked">
+												</div>
+											</div>
+										</form>
+									</div>
+								</fieldset>
+							</div>
+							<div class="layui-col-md3">
+								<fieldset class="layui-elem-field">
+									<legend>办理过程</legend>
+									<div class="layui-field-box" style="height: 512px;overflow: auto;">
+										<div class="layui-bg-gray">
+											<div style="float: left;"><i class="layui-icon">&#xe655;</i></div>
+											<div class="title-hover" style="float: right;"><i class="layui-icon">&#xe605;</i></div>
+											<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+										</div>
+										<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+											<div class="layui-colla-item">
+												<div class="layui-colla-title">
+													2019-04-24 17:30 上报•委领导
+												</div>
+												<div class="layui-colla-content">已接收。主任，2019-04-24 17:31<br>已接收。副主任，2019-04-24 17:31<br>未接收。副主任</div>
+											</div>
+										</div>
+										<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+											<div class="layui-colla-item">
+												<div class="layui-colla-title">
+													2019-04-24 16:30 上报市应急管理局。
+												</div>
+												<div class="layui-colla-content">已接收。李工，010-50505050，2019-04-24 16:31</div>
+											</div>
+										</div>
+										<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+											<div class="layui-colla-item">
+												<div class="layui-colla-title">
+													2019-04-24 15:30 接收朝阳区建委上报。
+												</div>
+												<div class="layui-colla-content">已接收。张工，010-59958300，2019-04-24 15:31</div>
+											</div>
+										</div>
+										<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+											<div class="layui-colla-item">
+												<div class="layui-colla-title">
+													2019-04-23 15:30 转发朝阳区建委
+												</div>
+												<div class="layui-colla-content">对方已接收。赵工，010-65451234，2019-04-23 15:31</div>
+											</div>
+										</div>
+										<div class="layui-collapse" lay-accordion style="margin-top: 10px;">
+											<div class="layui-colla-item">
+												<div class="layui-colla-title">
+													2019-04-23 14:30 接收市应急管理局核报
+												</div>
+												<div class="layui-colla-content">已接收。张工，010-59958300，2019-04-23 14:30</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<div class="layui-col-md12">
+								<fieldset class="layui-elem-field">
+									<legend>相关接报</legend>
+									<div class="layui-field-box" style="min-height: 150px;">
+										<blockquote class="layui-elem-quote layui-quote-nm">
+											<h3>朝阳区孙河乡工地内一工人坠亡（上报•委领导 2019-04-24 17:30）</h3>
+											<hr style=" height:2px;border-top:2px dotted #185598;" />
+											<table width="100%">
+												<tr>
+													<td>
+														情况类别：<span>事故灾难---建筑工程事故</span>
+													</td>
+													<td>
+														事发时间：<span>2019-04-23 10:00</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														事件级别：<span>Ⅲ级（较大）</span>
+													</td>
+													<td>
+														事发地点：<span>朝阳区孙河乡一工地</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan=2>
+														情况内容：<div style="display: inline;">市公安局报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+			事件具体经过。。。
+			事件处置结果。。。</div>
+													</td>
+												</tr>
+											</table>
+										</blockquote>
+										<blockquote class="layui-elem-quote layui-quote-nm">
+											<h3>朝阳区孙河乡工地内一工人坠亡（上报•市应急管理局 2019-04-24 16:30）</h3>
+											<hr style=" height:2px;border-top:2px dotted #185598;" />
+											<table width="100%">
+												<tr>
+													<td>
+														情况类别：<span>事故灾难---建筑工程事故</span>
+													</td>
+													<td>
+														事发时间：<span>2019-04-23 10:00</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														事件级别：<span>Ⅲ级（较大）</span>
+													</td>
+													<td>
+														事发地点：<span>朝阳区孙河乡一工地</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan=2>
+														情况内容：<div style="display: inline;">市公安局（）报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。经我单位向朝阳区建委核实，具体情况如下。。。。。。</div>
+													</td>
+												</tr>
+											</table>
+										</blockquote>
+										<blockquote class="layui-elem-quote layui-quote-nm">
+											<h3>朝阳区孙河乡工地内一工人坠亡（接收•朝阳区建委 2019-04-24 15:30）</h3>
+											<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+											<table width="100%">
+												<tr>
+													<td>
+														情况类别：<span>事故灾难---建筑工程事故</span>
+													</td>
+													<td>
+														事发时间：<span>2019-04-23 10:00</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														事件级别：<span>Ⅲ级（较大）</span>
+													</td>
+													<td>
+														事发地点：<span>朝阳区孙河乡一工地</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan=2>
+														情况内容：<div style="display: inline;">市公安局报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+			         经核实，具体情况如下。。。。。。</div>
+													</td>
+												</tr>
+											</table>
+										</blockquote>
+										<blockquote class="layui-elem-quote layui-quote-nm">
+											<h3>朝阳区孙河乡工地内一工人坠亡（转发•朝阳区建委 2019-04-23 15:30）</h3>
+											<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+											<table width="100%">
+												<tr>
+													<td>
+														情况类别：<span>事故灾难---建筑工程事故</span>
+													</td>
+													<td>
+														事发时间：<span>2019-04-23 10:00</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														事件级别：<span>Ⅲ级（较大）</span>
+													</td>
+													<td>
+														事发地点：<span>朝阳区孙河乡一工地</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan=2>
+														情况内容：<div style="display: inline;">市公安局报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+			         请核实相关情况并上报。</div>
+													</td>
+												</tr>
+											</table>
+										</blockquote>
+										<blockquote class="layui-elem-quote layui-quote-nm">
+											<h3>朝阳区孙河乡工地内一工人坠亡（接收核报•市应急管理局 2019-04-19 11:58）</h3>
+											<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+											<table width="100%">
+												<tr>
+													<td>
+														情况类别：<span>事故灾难---建筑工程事故</span>
+													</td>
+													<td>
+														事发时间：<span>2019-04-18 10:00</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														事件级别：<span>Ⅲ级（较大）</span>
+													</td>
+													<td>
+														事发地点：<span>朝阳区孙河乡一工地</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan=2>
+														情况内容：<div style="display: inline;">市公安局报，朝阳区孙河乡中粮集团一工地内，河南省林州市工人王某（男，52岁）在施工时不慎坠下，送往地坛医院后经抢救无效死亡。
+			         请贵单位核实情况。</div>
+													</td>
+												</tr>
+											</table>
+										</blockquote>
+									</div>
+								</fieldset>
+							</div>
+						</div>
 
 
 	</body>
@@ -1315,11 +1673,30 @@
 	<script>
 
 				//引入所需layui模块
-				layui.use(['jquery'], function() {
+				layui.use(['jquery','table'], function() {
 					
-					var $ = layui.$;
+					var $ = layui.$,
+					table = layui.table;
+					
+					// 监听预警接收进度条,点击弹出预警接收进度表
+					$(".jd").click(function() {
+						layer.open({
+							title: '接收进度',
+							type: 1,
+							content: $("#jsjdck"),
+							area: '800px'
+						});
+					});
 
-
+					// 标题详情事件
+					$(".xq").click(function() {
+						layer.open({
+							title: '事件详情',
+							type: 1,
+							content: $("#xqck"),
+							area: '1440px'
+						});
+					});
 
 
 					// 发布按钮事件
@@ -1363,8 +1740,43 @@
 							area: ['800px', '757px']
 						});
 					});
-
+					
+					
+					// 预警接收进度表数据填充
+					table.render({
+						elem: '#jsjdb',
+						skin: 'nob',
+						url: '../examples/json/table/jsjd.json',
+						cols: [
+							[{
+								field: 'company',
+								title: '接收单位',
+								width: 120,
+								fixed: 'left'
+							}, {
+								field: 'username',
+								title: '接收人',
+								width: 80
+							}, {
+								field: 'phone',
+								title: '接收人手机号',
+								width: 120
+							}, {
+								field: 'time',
+								title: '接收时间',
+								width: 150
+							}, {
+								field: 'state',
+								title: '接收状态',
+								width: 177
+							}]
+						]
+					});
+					
 				});
+				
+		
+		
 
 
 		function fabu() {
@@ -1417,35 +1829,15 @@
 		}
 
 		function chundang(){
-					layer.open({
-						title: '事件存档',
-						type: 0,
-						content: '确认存档？',
-						btn: ['确定', '取消']
-					});
-					}
-
-					// 标题详情事件
-					$("#xq").click(function() {
-						layer.open({
-							title: '事件详情',
-							type: 1,
-							content: $("#xqck"),
-							area: '1440px'
-						});
-					});
-
-
-		function banli() {
 			layer.open({
-				type: 2,
-				title: '突发事件',
-				shadeClose: true,
-				shade: 0.8,
-				area: ['1024px', '90%'],
-				content: 'home-banli.html' //iframe的url
+				title: '事件存档',
+				type: 0,
+				content: '确认存档？',
+				btn: ['确定', '取消']
 			});
-		}						
+		}
+
+							
 		
 		function shuju(){
 				layer.open({
