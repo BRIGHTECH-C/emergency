@@ -464,7 +464,7 @@
 									<div class="layui-inline">
 										<label class="layui-form-label">接收时间</label>
 										<div class="layui-input-block">
-											<input type="text" name="time" value="2019-04-25 14:31" class="layui-input jsfrom-time" />
+											<input type="text" name="time" value="1556173860" class="layui-input jsfrom-time" />
 										</div>
 									</div>
 									<div class="layui-inline">
@@ -505,7 +505,7 @@
 									<div class="layui-inline">
 										<label class="layui-form-label">报送时间</label>
 										<div class="layui-input-block">
-											<input type="text" name="time" value="2019-04-23 14:30" class="layui-input jsfrom-time" />
+											<input type="text" name="time" value="1556001000" class="layui-input jsfrom-time" />
 										</div>
 									</div>
 									<div class="layui-inline">
@@ -533,7 +533,7 @@
 									<div class="layui-inline">
 										<label class="layui-form-label">事发时间</label>
 										<div class="layui-input-block">
-											<input type="text" name="time" value="2019-04-23 10:00" class="layui-input jsfrom-time" />
+											<input type="text" name="time" value="1555984800" class="layui-input jsfrom-time" />
 										</div>
 									</div>
 									<div class="layui-inline">
@@ -873,12 +873,17 @@
 						elem: '#file',
 						url: '/upload/'
 					});
-
+					
 					// layui时间模块初始化
 					$('.jsfrom-time').each(function() {
+						var timevalue = "";
+						if(this.value != ""){
+							timevalue = new Date(parseInt(this.value*1000));
+						}
 						laydate.render({
 							elem: this,
-							type: 'datetime'
+							type: 'datetime',
+							value: timevalue
 						});
 					})
 					
